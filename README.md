@@ -1,4 +1,4 @@
-# wabot-aq
+# Atena Bot V2
 
 Simple WhatsApp Bot
 
