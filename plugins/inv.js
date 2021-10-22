@@ -111,11 +111,11 @@ Total inv: *${diamond + potion + sampah + makananpet}* item\n
 Warn: *${warn}*
 Banned: *No*
 `.trim()
-    conn.send2Button(m.chat, str, '© nekobotz', 'PROFILE', '.profile', 'SHOP', '#shop', m)
+    conn.send2Button(m.chat, str, watermark, 'Adventure', '.adventure', 'Shop', '.shop', m)
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']
-handler.command = /^(inv(entory)?|bal|level(ing)?|money|e?xp)$/i
+handler.command = /^(inv(entory)$/i
 module.exports = handler
 
 handler.register = true
