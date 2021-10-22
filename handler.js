@@ -574,7 +574,7 @@ global.dfail = (type, m, conn) => {
 	let name = conn.getName(m.sender)
   let msg = {
     rowner: 'This command only used by *Main Owner*\n_Perintah ini hanya digunakan oleh *Pemilik Bot*_',
-    owner: 'This command can only be used by *Owner*\n_Perintah ini hanya untuk *Pemilik Bot*_'
+    owner: 'This command can only be used by *Owner*\n_Perintah ini hanya untuk *Pemilik Bot*_',
     mods: 'This command can only be used by *Moderator*\n_Perintah ini hanya untuk *Moderator*_',
     premium: 'This command is only for *Premium Members*\n_Perintah ini hanya untuk *Member Premium*_',
     group: 'This command can only be used in *Groups!*\n_Perintah ini hanya dapat digunakan dalam *grup*_',
