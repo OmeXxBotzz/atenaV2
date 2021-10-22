@@ -227,13 +227,23 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 │⬦ *${conn.blocklist.length}* Users Blocked
 │⬦ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 │⬦ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┕━━〔${watermark}〕━⬢`.trim(),
+┕━━━⬢
+
+$readMore{}
+
+Join My Group Chat: *${conn.getName(conn.user.jid)}* :
+${(global.linkGC).map((v, i) => '⬦ *Group ' + (i + 1) + '*\n' + v).join`\n\n`}
+`.trim(),
           "buttonText": "Click Here!",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
-                {
+               {
+                  "title": "R u l e s",
+                  "description": "Sebelum menggunakan bot jangan lupa baca rules nya, Ok.",
+                  "rowId": ".rules"
+                }, {
                   "title": "🧾┃All Commands",
                   "description": "Semua List Perintah pada Bot",
                   "rowId": ".? all"
@@ -437,8 +447,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    // await conn.send3ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), watermark, '👤 Pemilik Bot', '.owner', '💵 Donasi', '.donasi', '📜 Rules', '.infobot', m)
-    await conn.send3ButtonLoc(m.chat, await (await fetch(`https://telegra.ph/file/c7fe0d7b524c9f4830bcd.jpg`)).buffer(), text.trim(), "Dont forget to read the Rules!\n" + watermark, 'Owner Bot👤', '.owner', 'Donate💵', '.donasi', 'Rules📜', '.infobot', m)
+    let imgatena = `https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg`
+    await conn.send3ButtonLoc(m.chat, await (await fetch(imgatena)).buffer(), text.trim(), "Dont forget to read the Rules!\n" + watermark, 'Owner Bot👤', '.owner', 'Donate💵', '.donasi', 'Rules📜', '.rules', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

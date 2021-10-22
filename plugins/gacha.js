@@ -3,25 +3,25 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let er = `
 ┌〔 List Gacha 〕
-├ waifu
-├ husbu
-├ neko
-├ loli
-├ elf
-├ shota
-├ sagiri
-├ elaina
-├ kanna
-├ shinobu
-├ megumin
-├ art
-├ wallnime
-├ genshin
-├furry
-├ azurlane
-├ frontline
-├ lol
-├ dota2
+│⬦ waifu
+│⬦ husbu
+│⬦ neko
+│⬦ loli
+│⬦ elf
+│⬦ shota
+│⬦ sagiri
+│⬦ elaina
+│⬦ kanna
+│⬦ shinobu
+│⬦ megumin
+│⬦ art
+│⬦ wallnime
+│⬦ genshin
+│⬦furry
+│⬦ azurlane
+│⬦ frontline
+│⬦ lol
+│⬦ dota2
 └────
 
 example:
@@ -57,12 +57,12 @@ _© Atena_
 		case 'frontline':
 		case 'lol': //league of legends
 		case 'dota2':
-		let res = await fetch(global.API('fxc7', '/api/sfw/' + args[0].toLowerCase(), {}, 'apikey'))
+		let res2 = await fetch(global.API('fxc7', '/api/sfw/' + args[0].toLowerCase(), {}, 'apikey'))
 		m.reply(global.wait)
-		if (!res.ok) throw await res.text()
-			let img = await res.buffer()
-			if (!img) throw img
-				conn.sendButtonImg(m.chat, await(img), 'Nih ' + args[0].toLowerCase() + ' nya', watermark, '⏩Get Again', `${usedPrefix}gacha ` + args[0].toLowerCase(), m)
+		if (!res2.ok) throw await res2.text()
+			let img2 = await res2.buffer()
+			if (!img2) throw img2
+				conn.sendButtonImg(m.chat, await(img2), 'Nih ' + args[0].toLowerCase() + ' nya', watermark, '⏩Get Again', `${usedPrefix}gacha ` + args[0].toLowerCase(), m)
 			break
         default:
             throw er
