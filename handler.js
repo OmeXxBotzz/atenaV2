@@ -29,7 +29,7 @@ module.exports = {
             if (!isNumber(user.healt)) user.healt = 0
             if (!isNumber(user.level)) user.level = 0
             if (!isNumber(user.exp)) user.exp = 0
-            if (!isNumber(user.title)) user.title = 'Life is about fight.'
+            if (!isNumber(user.title)) user.title = 'Nothing'
             if (!isNumber(user.limit)) user.limit = 10
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
             if (!isNumber(user.money)) user.money = 0
@@ -226,8 +226,8 @@ module.exports = {
           if (!'anticall' in settings) settings.anticall = true
           if (!'antispam' in settings) settings.antispam = true
           if (!'antitroli' in settings) settings.antitroli = true
-          if (!'backup' in settings) settings.backup = false
-          if (!isNumber(settings.backupDB)) settings.backupDB = 0
+          if (!'backup' in settings) settings.backup = true
+          if (!isNumber(settings.backupDB)) settings.backupDB = 1
           if (!'groupOnly' in settings) settings.groupOnly = false
           if (!'jadibot' in settings) settings.groupOnly = false
           if (!'nsfw' in settings) settings.nsfw = true
@@ -237,8 +237,8 @@ module.exports = {
           anticall: true,
           antispam: true,
           antitroli: true,
-          backup: false,
-          backupDB: 0,
+          backup: true,
+          backupDB: 1,
           groupOnly: false,
           jadibot: false,
           onsfw: true,
@@ -392,7 +392,7 @@ module.exports = {
 
           m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 8 // XP Earning per command
-          if (xp > 200) m.reply('Ngecit -_-') // Hehehe
+          if (xp > 200) m.reply('banh lu nge cheat yah?') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
@@ -488,7 +488,7 @@ module.exports = {
       } catch (e) {
         console.log(m, m.quoted, e)
       }
-    //  if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
+      if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
     this.chatRead(m.chat).catch(() => { })
     }
   },

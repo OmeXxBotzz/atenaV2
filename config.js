@@ -47,16 +47,17 @@ global.packname = '©Atena 𝚋𝚢 𝙺𝚑𝚊𝚎𝚕𝚂𝚊𝚗' // ganti a
 global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn' // ganti aja
 
 // silakan di ganti klo mau
-global.wait = '_*Wait...*_'
+global.wait = '*〔Wait〕*'
 global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!\nKalo Mau main Disini aja\nhttps://chat.whatsapp.com/INua3dEj25B0eFrHma0OsC'
 global.nsfw = 'Fitur NSFW Dimatikan.'
 global.eror = '_*Server Error*_'
 global.watermark = '© Atena'
 
+global.imagebot = 'https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 // tingkat kesulitan, semakin tinggi semakin susah
-global.multiplier = 16 // The higher, The harder levelup
+global.multiplier = 64 // The higher, The harder levelup
 
 //*****************PEMBATAS*********************
 // JANGAN DI GANTI NTAR KLO GABISA JAN TANYA GW
