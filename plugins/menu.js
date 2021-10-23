@@ -219,7 +219,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         "listMessage": {
           "title": `${ucapan()} ${name}, have a greet day!`.trim(),
           "description": `
-┍━━〔 %me 〕━⬢
+┍━━〔 conn.user.name 〕━⬢
 │⬦ Aktif selama ${uptime}
 │⬦ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 │⬦ *${Object.keys(global.db.data.users).length}* Users
@@ -229,11 +229,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 │⬦ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┕━━━⬢
 
-$readMore{}
+${readMore}
 
-Join My Group Chat: *${conn.getName(conn.user.jid)}* :
+Join My Group Chat:
 ${(global.linkGC).map((v, i) => '⬦ *Group ' + (i + 1) + '*\n' + v).join`\n\n`}
-`.trim(),
+
+
+_Dont forget to read the Rules!_`.trim(),
           "buttonText": "Click Here!",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -344,8 +346,8 @@ ${(global.linkGC).map((v, i) => '⬦ *Group ' + (i + 1) + '*\n' + v).join`\n\n`}
                   "description": "Jadi Bot",
                   "rowId": ".? jadibot"
                 }, {
-                  "title": "⛩️┃Anime",
-                  "description": "Cari Anime Di Bot",
+                  "title": "⛩️┃Weebs",
+                  "description": "Menu Para Ras Terkuat",
                   "rowId": ".? anime"
                 }, {
                   "title": "ℹ️┃Info",
@@ -447,8 +449,7 @@ ${(global.linkGC).map((v, i) => '⬦ *Group ' + (i + 1) + '*\n' + v).join`\n\n`}
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    let imgatena = `https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg`
-    await conn.send3ButtonLoc(m.chat, await (await fetch(imgatena)).buffer(), text.trim(), "Dont forget to read the Rules!\n" + watermark, 'Owner Bot👤', '.owner', 'Donate💵', '.donasi', 'Rules📜', '.rules', m)
+    await conn.send3ButtonLoc(m.chat, await (await fetch(imagebot)).buffer(), text.trim(), "Dont forget to read the Rules!\n" + watermark, 'Owner Bot👤', '.owner', 'Donate💵', '.donasi', 'Rules📜', '.rules', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

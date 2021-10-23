@@ -46,7 +46,7 @@ Premium: ${prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes
 Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'Tidak'}${lastclaim > 0 ? '\nTerakhir Klaim: ' + new Date(lastclaim).toLocaleString() : ''}
 `.trim()
     let mentionedJid = [who]
-    conn.sendFile(m.chat, res, 'pp.jpg', banned ? 'Your has been banned\nChat owner to Unbanned' : str, m, false, { contextInfo: { mentionedJid } })
+    conn.sendFile(m.chat, pp, 'pp.jpg', banned ? 'Your has been banned\nChat owner to Unbanned' : str, m, false, { contextInfo: { mentionedJid } })
   }
 }
 handler.help = ['profile [@user]']

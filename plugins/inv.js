@@ -107,7 +107,7 @@ Total inv: *${diamond + potion + sampah + makananpet}* item\n
 7.Top Mythic *${usersmythic.indexOf(m.sender) + 1}* dari *${usersmythic.length}*
 8.Top Legendary *${userslegendary.indexOf(m.sender) + 1}* dari *${userslegendary.length}*
 9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* dari *${userssampah.length}*
-\n${readMore}\n
+\n\n
 Warn: *${warn}*
 Banned: *No*
 `.trim()
@@ -115,7 +115,7 @@ Banned: *No*
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']
-handler.command = /^(inv(entory)$/i
+handler.command = /^(inv|inventory)$/i
 module.exports = handler
 
 handler.register = true

@@ -11,15 +11,15 @@ let handler = async (m, { conn, args }) => {
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(20, sortedExp.length)
     let text = `
 ┌〔 *Level Leaderboard Top ${len}* 〕
-├Kamu: *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
+├Kamu: *${userslevel.indexOf(m.sender)}* dari *${userslevel.length}*
 │
-${sortedlevel.slice(0, len).map(([user, data], i) => (i + 1) + '├ @' + user.split`@`[0] + ': *' + data.level + ' Lvl*').join`\n`}
+${sortedlevel.slice(0, len).map(([user, data], i) => `├ ${i + 1}.` + ' @' + user.split`@`[0] + ': *' + data.level + ' Lvl*').join`\n`}
 └────
 
 ┌〔 *Money Leaderboard Top ${len}* 〕
 ├Kamu: *${usersmoney.indexOf(m.sender) + 1}* dari *${usersmoney.length}*
 │
-${sortedmoney.slice(0, len).map(([user, data], i) => (i + 1) + '├ @' + user.split`@`[0] + ': *' + data.money + ' Money*').join`\n`}
+${sortedmoney.slice(0, len).map(([user, data], i) => `├ ${i + 1}.` + ' @' + user.split`@`[0] + ': *' + data.money + ' Money*').join`\n`}
 └────
 `.trim()
   conn.reply(m.chat, text, m, {
@@ -29,7 +29,7 @@ ${sortedmoney.slice(0, len).map(([user, data], i) => (i + 1) + '├ @' + user.sp
   })
 }
 handler.help = ['leaderboard [jumlah user]', 'lb [jumlah user]']
-handler.tags = ['rpg']
+handler.tags = ['rpg', 'xp']
 handler.command = /^(leaderboard|lb)$/i
 handler.owner = false
 handler.mods = false
