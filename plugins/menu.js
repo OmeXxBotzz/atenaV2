@@ -217,11 +217,12 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `${ucapan()} ${name}, have a greet day!`.trim(),
-          "description": `
-┍━━〔 conn.user.name 〕━⬢
-│⬦ Aktif selama ${uptime}
-│⬦ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+          "title": `List Menu Atena Bot`,
+          "description": `${ucapan()} ${name}, have a greet day!
+
+┍━━〔 ${conn.user.name} 〕━⬢
+│⬦ Runtime ${uptime}
+│⬦ Battery ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 charging' : ''}` : 'undefined'}
 │⬦ *${Object.keys(global.db.data.users).length}* Users
 │⬦ *${totaljadibot.length}* Jadibot
 │⬦ *${conn.blocklist.length}* Users Blocked

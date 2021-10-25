@@ -4,11 +4,13 @@ let handler = async (m, { conn }) => conn.send3ButtonLoc(m.chat, await (await fe
 ┌〔 Donate/Donasi 〕
 ├ Dana : 082248192917
 ├ OVO : 082248192917
+├ GOPAY : 082248192917
+│
 └────
 
-Donate to Atena Bot for Support me
+Donate to Support Atena Bot
 ~Khael
-`.trim(), watermark, 'Owner', '.owner', 'Dana', '.viadana', 'OVO', '.viaovo')
+`.trim(), watermark, 'Dana', '.viadana', 'OVO', '.viaovo', 'Gopay', '.viagopay',)
 handler.help = ['donasi']
 handler.tags = ['info']
 handler.command = /^dona(te|si)$/i

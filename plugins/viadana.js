@@ -1,17 +1,14 @@
 let handler = async (m, { conn }) => {
+	let img = 'https://telegra.ph/file/9f20bffd7012b50e50d20.png'
 	let dana = `
 ┍━━〔Via Dana〕━⬢
-│⬦ Nomor:
-│	082248192917
-│
-│⬦ Atas Nama:
-│	Khael
+│⬦ Note:
+│Scan qr code di atas untuk transaksi ke Dana
 ┕━━━⬢
 
-Scan qr code di atas untuk transaksi ke Dana
 _support terus bot Atena.._
 `.trim()
-		conn.sendFile(m.chat, 'https://telegra.ph/file/4b266e8188483a42d6949.jpg', 'dana.jpg', dana, m)
+		conn.sendFile(m.chat, img, 'dana.jpg', dana, m)
 }
 
 handler.command = /^(viadana|dana)$/i

@@ -111,9 +111,9 @@ ${usedPrefix + command} pussy_jpg
             throw er
     }
 }
-handler.help = ['nsfwgacha'].map(v => v + ' <type>')
+handler.help = ['nsfwgacha2'].map(v => v + ' <type>')
 handler.tags = ['hentai']
-handler.command = /^nsfwgacha$/i
+handler.command = /^nsfwgacha2$/i
 
 handler.premium = true
 handler.limit = true

@@ -2,17 +2,17 @@ let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
     let er = `
- Gacha Nsfw 
- waifu
- neko
- loli
- furry
- azurlane
- genshin
- frontline
- lol
- dota2
-
+┌〔 Gacha Nsfw 〕
+│⬦ waifu
+│⬦ neko
+│⬦ loli
+│⬦ furry
+│⬦ azurlane
+│⬦ genshin
+│⬦ frontline
+│⬦ lol
+│⬦ dota2
+└────
 
 example:
 ${usedPrefix + command} neko
@@ -28,7 +28,7 @@ ${usedPrefix + command} neko
 			if (!res.ok) throw await res.text()
 			let img = await res.buffer()
 			if (!img) throw img
-				conn.sendButtonImg(m.chat, await(img), 'Hayoo ngapain gosok layar hp ke tytyd', watermark, '💦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
+				conn.sendButtonImg(m.chat, await(img), 'Hayoo ngapain gosok layar hp ke tytyd', watermark, 'ðŸ’¦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
 				break
 				case 'ahegao':
 				case 'furry':
@@ -42,7 +42,7 @@ ${usedPrefix + command} neko
 				if (!res2.ok) throw await res2.text()
 				let img2 = await res2.buffer()
 				if (!img2) throw img2
-					conn.sendButtonImg(m.chat, await(img2), 'Hayoo ngapain gosok layar hp ke tytyd', watermark, '💦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
+					conn.sendButtonImg(m.chat, await(img2), 'Hayoo ngapain gosok layar hp ke tytyd', watermark, 'ðŸ’¦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
 			break
         default:
             throw er

@@ -27,8 +27,8 @@ Anda telah membuka *Common crate* dan mendapatkan:${cm > 0 ? `\nMoney: ${cm}` : 
 `.trim()
                     if (global.db.data.users[m.sender].common >= 1) {
                         global.db.data.users[m.sender].common -= 1
-                        global.db.data.users[m.sender].money += cm * 1
-                        global.db.data.users[m.sender].exp += ce * 1
+                        global.db.data.users[m.sender].money += cm * 3
+                        global.db.data.users[m.sender].exp += ce * 3
                         global.db.data.users[m.sender].potion += cp * 1
                         global.db.data.users[m.sender].uncommon += cu * 1
                         global.db.data.users[m.sender].common += cc * 1
@@ -51,8 +51,8 @@ Anda telah membuka *Common crate* dan mendapatkan:${cm1 > 0 ? `\nMoney: ${cm1}` 
 `.trim()
                     if (global.db.data.users[m.sender].common >= 10) {
                         global.db.data.users[m.sender].common -= 10
-                        global.db.data.users[m.sender].money += cm1 * 1
-                        global.db.data.users[m.sender].exp += ce1 * 1
+                        global.db.data.users[m.sender].money += cm1 * 6
+                        global.db.data.users[m.sender].exp += ce1 * 6
                         global.db.data.users[m.sender].potion += cp1 * 1
                         global.db.data.users[m.sender].uncommon += cu1 * 1
                         global.db.data.users[m.sender].common += cc1 * 1
@@ -75,8 +75,8 @@ Anda telah membuka *Common crate* dan mendapatkan:${cm2 > 0 ? `\nMoney: ${cm2}` 
 `.trim()
                     if (global.db.data.users[m.sender].common >= 100) {
                         global.db.data.users[m.sender].common -= 100
-                        global.db.data.users[m.sender].money += cm2 * 1
-                        global.db.data.users[m.sender].exp += ce2 * 1
+                        global.db.data.users[m.sender].money += cm2 * 9
+                        global.db.data.users[m.sender].exp += ce2 * 9
                         global.db.data.users[m.sender].potion += cp2 * 1
                         global.db.data.users[m.sender].uncommon += cu2 * 1
                         global.db.data.users[m.sender].common += cc2 * 1
@@ -99,8 +99,8 @@ Anda telah membuka *Common crate* dan mendapatkan:${cm3 > 0 ? `\nMoney: ${cm3}` 
 `.trim()
                     if (global.db.data.users[m.sender].common >= 1000) {
                         global.db.data.users[m.sender].common -= 1000
-                        global.db.data.users[m.sender].money += cm3 * 1
-                        global.db.data.users[m.sender].exp += ce3 * 1
+                        global.db.data.users[m.sender].money += cm3 * 12
+                        global.db.data.users[m.sender].exp += ce3 * 12
                         global.db.data.users[m.sender].potion += cp3 * 1
                         global.db.data.users[m.sender].uncommon += cu3 * 1
                         global.db.data.users[m.sender].common += cc3 * 1
@@ -134,17 +134,17 @@ Anda telah membuka *Uncommon crate* dan mendapatkan:${um > 0 ? `\nMoney: ${um}` 
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 1) {
                         global.db.data.users[m.sender].uncommon -= 1
-                        global.db.data.users[m.sender].money += um * 1
+                        global.db.data.users[m.sender].money += um * 3
                         global.db.data.users[m.sender].diamond += ud * 1
-                        global.db.data.users[m.sender].exp += ue * 1
+                        global.db.data.users[m.sender].exp += ue * 3
                         global.db.data.users[m.sender].potion += up * 1
                         global.db.data.users[m.sender].common += uc * 1
                         global.db.data.users[m.sender].uncommon += uu * 1
                         conn.reply(m.chat, Hun, m)
-                        if (umc > 0) {
-                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc} Mythic Crate`)
-                            global.db.data.users[m.sender].mythic += umc * 1
-                        }
+                        //if (umc > 0) {
+                        //    m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc} Mythic Crate`)
+                        //    global.db.data.users[m.sender].mythic += umc * 1
+                        //}
                     } else conn.reply(m.chat, 'Uncommon crate anda tidak cukup', m)
                     break
                 case '10':
@@ -167,9 +167,9 @@ Anda telah membuka *Uncommon crate* dan mendapatkan:${um1 > 0 ? `\nMoney: ${um1}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 10) {
                         global.db.data.users[m.sender].uncommon -= 10
-                        global.db.data.users[m.sender].money += um1 * 1
+                        global.db.data.users[m.sender].money += um1 * 6
                         global.db.data.users[m.sender].diamond += ud1 * 1
-                        global.db.data.users[m.sender].exp += ue1 * 1
+                        global.db.data.users[m.sender].exp += ue1 * 6
                         global.db.data.users[m.sender].potion += up1 * 1
                         global.db.data.users[m.sender].common += uc1 * 1
                         global.db.data.users[m.sender].uncommon += uu1 * 1
@@ -200,17 +200,17 @@ Anda telah membuka *Uncommon crate* dan mendapatkan:${um2 > 0 ? `\nMoney: ${um2}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 100) {
                         global.db.data.users[m.sender].uncommon -= 100
-                        global.db.data.users[m.sender].money += um2 * 1
+                        global.db.data.users[m.sender].money += um2 * 9
                         global.db.data.users[m.sender].diamond += ud2 * 1
-                        global.db.data.users[m.sender].exp += ue2 * 1
+                        global.db.data.users[m.sender].exp += ue2 * 9
                         global.db.data.users[m.sender].potion += up2 * 1
                         global.db.data.users[m.sender].common += uc2 * 1
                         global.db.data.users[m.sender].uncommon += uu2 * 1
                         conn.reply(m.chat, Hun2, m)
-                        if (umc2 > 0) {
-                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc2} Mythic Crate`)
-                            global.db.data.users[m.sender].mythic += umc2 * 1
-                        }
+//                        if (umc2 > 0) {
+//                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc2} Mythic Crate`)
+//                            global.db.data.users[m.sender].mythic += umc2 * 1
+//                        }
                     } else conn.reply(m.chat, 'Uncommon crate anda tidak cukup', m)
                     break
                 case '1000':
@@ -233,17 +233,17 @@ Anda telah membuka *Uncommon crate* dan mendapatkan:${um3 > 0 ? `\nMoney: ${um3}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 1000) {
                         global.db.data.users[m.sender].uncommon -= 1000
-                        global.db.data.users[m.sender].money += um3 * 1
+                        global.db.data.users[m.sender].money += um3 * 12
                         global.db.data.users[m.sender].diamond += ud3 * 1
-                        global.db.data.users[m.sender].exp += ue3 * 1
+                        global.db.data.users[m.sender].exp += ue3 * 12
                         global.db.data.users[m.sender].potion += up3 * 1
                         global.db.data.users[m.sender].common += uc3 * 1
                         global.db.data.users[m.sender].uncommon += uu3 * 1
                         conn.reply(m.chat, Hun3, m)
-                        if (umc3 > 0) {
-                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc3} Mythic Crate`)
-                            global.db.data.users[m.sender].mythic += umc3 * 1
-                        }
+//                        if (umc3 > 0) {
+//                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${umc3} Mythic Crate`)
+//                            global.db.data.users[m.sender].mythic += umc3 * 1
+//                        }
                     } else conn.reply(m.chat, 'Uncommon crate anda tidak cukup', m)
                     break
                 default:
@@ -255,12 +255,12 @@ Anda telah membuka *Uncommon crate* dan mendapatkan:${um3 > 0 ? `\nMoney: ${um3}
                 case '1':
                 case 'crate':
                     let _mm = `${Math.floor(Math.random() * 200)}`.trim()
-                    let _mmm = `${pickRandom(['0', '0', '1', '0'])}`.trim()
+                    let _mmm = `${pickRandom(['0', '0', '0', '0', '1', '0'])}`.trim()
                     let _me = `${Math.floor(Math.random() * 250)}`.trim()
                     let _mp = `${Math.floor(Math.random() * 3)}`.trim()
                     let _mu = `${Math.floor(Math.random() * 3)}`.trim()
                     let _mc = `${Math.floor(Math.random() * 5)}`.trim()
-                    let _ml = `${pickRandom(['0', '0', '1', '0',  '0'])}`.trim()
+                    let _ml = `${pickRandom(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0'])}`.trim()
                     let _md = `${Math.floor(Math.random() * 3)}`.trim()
                     let mm = (_mm * 1)
                     let mmm = (_mmm * 1)
@@ -275,9 +275,9 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm > 0 ? `\nMoney: ${mm}` : 
 `.trim()
                     if (global.db.data.users[m.sender].mythic >= 1) {
                         global.db.data.users[m.sender].mythic -= 1
-                        global.db.data.users[m.sender].money += mm * 1
+                        global.db.data.users[m.sender].money += mm * 3
                         global.db.data.users[m.sender].diamond += md * 1
-                        global.db.data.users[m.sender].exp += me * 1
+                        global.db.data.users[m.sender].exp += me * 3
                         global.db.data.users[m.sender].potion += mp * 1
                         global.db.data.users[m.sender].common += mc * 1
                         global.db.data.users[m.sender].uncommon += mu * 1
@@ -314,9 +314,9 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm1 > 0 ? `\nMoney: ${mm1}` 
 `.trim()
                     if (global.db.data.users[m.sender].mythic >= 10) {
                         global.db.data.users[m.sender].mythic -= 10
-                        global.db.data.users[m.sender].money += mm1 * 1
+                        global.db.data.users[m.sender].money += mm1 * 6
                         global.db.data.users[m.sender].diamond += md1 * 1
-                        global.db.data.users[m.sender].exp += me1 * 1
+                        global.db.data.users[m.sender].exp += me1 * 6
                         global.db.data.users[m.sender].potion += mp1 * 1
                         global.db.data.users[m.sender].common += mc1 * 1
                         global.db.data.users[m.sender].uncommon += mu1 * 1
@@ -353,9 +353,9 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm2 > 0 ? `\nMoney: ${mm2}` 
 `.trim()
                     if (global.db.data.users[m.sender].mythic >= 100) {
                         global.db.data.users[m.sender].mythic -= 100
-                        global.db.data.users[m.sender].money += mm2 * 1
+                        global.db.data.users[m.sender].money += mm2 * 9
                         global.db.data.users[m.sender].diamond += md2 * 1
-                        global.db.data.users[m.sender].exp += me2 * 1
+                        global.db.data.users[m.sender].exp += me2 * 9
                         global.db.data.users[m.sender].potion += mp2 * 1
                         global.db.data.users[m.sender].common += mc2 * 1
                         global.db.data.users[m.sender].uncommon += mu2 * 1
@@ -384,9 +384,9 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm3 > 0 ? `\nMoney: ${mm3}` 
 `.trim()
                     if (global.db.data.users[m.sender].mythic >= 1000) {
                         global.db.data.users[m.sender].mythic -= 1000
-                        global.db.data.users[m.sender].money += mm3 * 1
+                        global.db.data.users[m.sender].money += mm3 * 12
                         global.db.data.users[m.sender].diamond += md3 * 1
-                        global.db.data.users[m.sender].exp += me3 * 1
+                        global.db.data.users[m.sender].exp += me3 * 12
                         global.db.data.users[m.sender].potion += mp3 * 1
                         global.db.data.users[m.sender].common += mc3 * 1
                         global.db.data.users[m.sender].uncommon += mu3 * 1
@@ -414,10 +414,10 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm3 > 0 ? `\nMoney: ${mm3}` 
                     let _lp = `${Math.floor(Math.random() * 5)}`.trim()
                     let _lu = `${Math.floor(Math.random() * 7)}`.trim()
                     let _lc = `${Math.floor(Math.random() * 10)}`.trim()
-                    let _ll = `${pickRandom(['0', '0', '1', '0'])}`.trim()
+                    let _ll = `${pickRandom(['0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0'])}`.trim()
                     let _lpp = `${pickRandom(['0', '1', '0'])}`.trim()
                     let _ld = `${Math.floor(Math.random() * 5)}`.trim()
-                    let _lmm = `${pickRandom(['0', '1', '0', '1', '0', '0'])}`.trim()
+                    let _lmm = `${pickRandom(['0', '0', '0', '0', '0', '0','0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',])}`.trim()
                     let lm = (_lm * 1)
                     let le = (_le * 1)
                     let lp = (_lp * 1) 
@@ -432,9 +432,9 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${lm > 0 ? `\nMoney: ${lm}`
 `.trim()  
                     if (global.db.data.users[m.sender].legendary >= 1) {
                         global.db.data.users[m.sender].legendary -= 1
-                        global.db.data.users[m.sender].money += lm * 1
+                        global.db.data.users[m.sender].money += lm * 3
                         global.db.data.users[m.sender].diamond += ld * 1
-                        global.db.data.users[m.sender].exp += le * 1
+                        global.db.data.users[m.sender].exp += le * 3
                         global.db.data.users[m.sender].potion += lp * 1
                         global.db.data.users[m.sender].common += lc * 1
                         global.db.data.users[m.sender].uncommon += lu * 1
@@ -474,9 +474,9 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${lm1 > 0 ? `\nMoney: ${lm1
 `.trim()  
                     if (global.db.data.users[m.sender].legendary >= 10) {
                         global.db.data.users[m.sender].legendary -= 10
-                        global.db.data.users[m.sender].money += lm1 * 1
+                        global.db.data.users[m.sender].money += lm1 * 6
                         global.db.data.users[m.sender].diamond += ld1 * 1
-                        global.db.data.users[m.sender].exp += le1 * 1
+                        global.db.data.users[m.sender].exp += le1 * 6
                         global.db.data.users[m.sender].potion += lp1 * 1
                         global.db.data.users[m.sender].common += lc1 * 1
                         global.db.data.users[m.sender].uncommon += lu1 * 1
@@ -516,9 +516,9 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${lm2 > 0 ? `\nMoney: ${lm2
 `.trim()  
                     if (global.db.data.users[m.sender].legendary >= 100) {
                         global.db.data.users[m.sender].legendary -= 100
-                        global.db.data.users[m.sender].money += lm2 * 1
+                        global.db.data.users[m.sender].money += lm2 * 9
                         global.db.data.users[m.sender].diamond += ld2 * 1
-                        global.db.data.users[m.sender].exp += le2 * 1
+                        global.db.data.users[m.sender].exp += le2 * 9
                         global.db.data.users[m.sender].potion += lp2 * 1
                         global.db.data.users[m.sender].common += lc2 * 1
                         global.db.data.users[m.sender].uncommon += lu2 * 1
@@ -558,9 +558,9 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${lm3 > 0 ? `\nMoney: ${lm3
 `.trim()  
                     if (global.db.data.users[m.sender].legendary >= 1000) {
                         global.db.data.users[m.sender].legendary -= 1000
-                        global.db.data.users[m.sender].money += lm3 * 1
+                        global.db.data.users[m.sender].money += lm3 * 12
                         global.db.data.users[m.sender].diamond += ld3 * 1
-                        global.db.data.users[m.sender].exp += le3 * 1
+                        global.db.data.users[m.sender].exp += le3 * 12
                         global.db.data.users[m.sender].potion += lp3 * 1
                         global.db.data.users[m.sender].common += lc3 * 1
                         global.db.data.users[m.sender].uncommon += lu3 * 1
@@ -637,6 +637,8 @@ handler.tags = ['rpg']
 handler.command = /^(open|buka)$/i
 
 handler.fail = null
+
+handler.exp = 0
 
 module.exports = handler
 

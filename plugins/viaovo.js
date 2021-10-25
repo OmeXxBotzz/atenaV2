@@ -1,16 +1,14 @@
 let handler = async (m, { conn }) => {
-	let ovo = `┍━━〔Via Dana〕━⬢
-│⬦ Nomor:
-│	082248192917
-│
-│⬦ Atas Nama:
-│	Khael
+	let img = 'https://telegra.ph/file/268cbaf3d038d2984abed.png'
+	let ovo = `
+┍━━〔Via Ovo〕━⬢
+│⬦ Note:
+│Scan qr code di atas untuk transaksi ke Ovo
 ┕━━━⬢
 
-Scan qr code di atas untuk transaksi ke OVO
 _support terus bot Atena.._
   `.trim()
-		conn.sendFile(m.chat, 'https://telegra.ph/file/b500ea18a3641048df0bd.jpg', 'ovo.jpg', ovo, m)
+		conn.sendFile(m.chat, img, 'ovo.jpg', ovo, m)
 }
 
 handler.command = /^(viaovo|ovo)$/i
