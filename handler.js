@@ -240,7 +240,7 @@ module.exports = {
           backup: true,
           backupDB: 1,
           groupOnly: false,
-          jadibot: false,
+          jadibot: true,
           onsfw: true,
           status: 0,
         }
@@ -445,7 +445,7 @@ module.exports = {
                 console.error(e)
               }
             }
-            if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+           // if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
           }
           break
         }
