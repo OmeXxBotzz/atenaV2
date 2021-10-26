@@ -1,7 +1,6 @@
 let util = require('util')
 let fetch = require('node-fetch')
 let simple = require('./lib/simple')
-const uploadImage = require('./lib/uploadImage')
 let { MessageType } = require('@adiwajshing/baileys')
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
