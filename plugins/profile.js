@@ -28,17 +28,18 @@ let handler = async (m, { conn, usedPrefix }) => {
         pc: 0,
       }
     }
-    let { name, limit, exp, lastclaim, registered, regTime, age, level, role, banned } = global.db.data.users[who]
+    let { name, limit, exp, lastclaim, registered, regTime, age, level, money, role, banned } = global.db.data.users[who]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let math = max - xp
-	let res = `https://api.lolhuman.xyz/api/rank?apikey=929b48b9aa5a91abed8526cd&img=${pp}&background=${ppbg}&username=${username}&level=${level}&ranking=?&currxp=${exp}&xpneed=${max}`
-    //let res = `http://hardianto-chan.herokuapp.com/api/rankcard?profile=${pp}&name=${name}&bg=https://i.ibb.co/4YBNyvP/images-76.jpg&needxp=${max}&curxp=${exp}&level=${level}&logorank=https://i.ibb.co/Wn9cvnv/FABLED.png`
+	//let res = `https://api.lolhuman.xyz/api/rank?apikey=929b48b9aa5a91abed8526cd&img=${pp}&background=${ppbg}&username=${username}&level=${level}&ranking=?&currxp=${exp}&xpneed=${max}`
+	let res = `https://hardianto-chan.herokuapp.com/api/rankcard?profile=${pp}&name=${username}&bg=https://i.ibb.co/4YBNyvP/images-76.jpg&needxp=1000&curxp=500&level=20&logorank=https://i.ibb.co/Wn9cvnv/FABLED.png`
     let str = `
 Nama: ${username} ${registered ? '(' + name + ') ' : ''}(@${who.replace(/@.+/, '')})${about != 401 ? '\nInfo: ' + about : ''}
 Nomor: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 Link: https://wa.me/${who.split`@`[0]}${registered ? '\nUmur: ' + age : ''}
 XP: TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Siap untuk *${usedPrefix}levelup*` : `${math} XP lagi untuk levelup`}]
+Uang: ${money}
 Level: ${level}
 Role: *${role}*
 Limit: ${limit}
