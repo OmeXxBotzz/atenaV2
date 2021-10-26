@@ -1,20 +1,9 @@
-// Bismillahirrahmanirrahim
-// thank you to ALLAH Swt
-// thank you to Nurutomo as wabot-aq
-// thank you to ariffb as stikerinbot
-// thank you to botstylee
-// thank you to bochilgaming as games-wabot
-// thank you to benni ismael
-// thank you to zerochanBot
-// thank you to fernazer
-// thank you to MikeBot Dev Team
-// thank you to ALL Bot creator
-// and thanks you to who support my Bot
+// Source Code from NekoBotz (DanishGanz)
 
 global.linkGC = ['https://chat.whatsapp.com/INua3dEj25B0eFrHma0OsC', 'https://chat.whatsapp.com/B9bGT4rmw8PFnTYCYRcNab', 'https://chat.whatsapp.com/B9bGT4rmw8PFnTYCYRcNab'] // ganti jadi group lu
 global.owner = ['6282248192917', '628114811363', '62822481929171'] // Put your number here
 global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.prems = ["6283819142257"] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   hardianto: 'https://hardianto-chan.herokuapp.com',
@@ -43,12 +32,12 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = '©Atena 𝚋𝚢 𝙺𝚑𝚊𝚎𝚕𝚂𝚊𝚗' // ganti aja
+global.packname = '©Atena 𝚋𝚢 𝙺𝚑𝚊𝚎𝚕𝚂𝚊𝚗'
 global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn' // ganti aja
 
-// silakan di ganti klo mau
-global.wait = '*〔Wait〕*'
-global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!\nKalo Mau main Disini aja\nhttps://chat.whatsapp.com/INua3dEj25B0eFrHma0OsC'
+// msg
+global.wait = '*〔 Ｗａｉｔ〕*'
+global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!'
 global.nsfw = 'Fitur NSFW Dimatikan.'
 global.eror = '_*Server Error*_'
 global.watermark = '© Atena'
@@ -57,7 +46,7 @@ global.imagebot = 'https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 // tingkat kesulitan, semakin tinggi semakin susah
-global.multiplier = 64 // The higher, The harder levelup
+global.multiplier = 64
 
 //*****************PEMBATAS*********************
 // JANGAN DI GANTI NTAR KLO GABISA JAN TANYA GW

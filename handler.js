@@ -1,5 +1,7 @@
 let util = require('util')
+let fetch = require('node-fetch')
 let simple = require('./lib/simple')
+const uploadImage = require('./lib/uploadImage')
 let { MessageType } = require('@adiwajshing/baileys')
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -219,29 +221,29 @@ module.exports = {
           viewonce: true,
         }
         
-                let settings = global.db.data.settings[this.user.jid]
+        let settings = global.db.data.settings[this.user.jid]
         if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
         if (settings) {
           if (!'anon' in settings) settings.anon = true
           if (!'anticall' in settings) settings.anticall = true
-          if (!'antispam' in settings) settings.antispam = true
-          if (!'antitroli' in settings) settings.antitroli = true
+          if (!'antispam' in settings) settings.antispam = false
+          if (!'antitroli' in settings) settings.antitroli = false
           if (!'backup' in settings) settings.backup = true
           if (!isNumber(settings.backupDB)) settings.backupDB = 1
           if (!'groupOnly' in settings) settings.groupOnly = false
           if (!'jadibot' in settings) settings.groupOnly = false
-          if (!'nsfw' in settings) settings.nsfw = true
+          if (!'nsfw' in settings) settings.nsfw = false
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
           anon: true,
           anticall: true,
-          antispam: true,
-          antitroli: true,
+          antispam: false,
+          antitroli: false,
           backup: true,
           backupDB: 1,
           groupOnly: false,
-          jadibot: true,
-          onsfw: true,
+          jadibot: false,
+          nsfw: false,
           status: 0,
         }
       } catch (e) {
