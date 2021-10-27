@@ -17,8 +17,8 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let armornya = (armor == 0 ? 0 : '' || armor == 1 ? 5 : '' || armor == 2 ? 10 : '' || armor == 3 ? 15 : '' || armor == 4 ? 21 : '' || armor == 5 ? 30 : '')
             let __health = (___health > 60 ? ___health - kucingnya - armornya : ___health)
             let healt = (kucing == 0 && armor == 0 ? pickRandom(['100', '99', '98', '97', '96', '95', '94', '93', '92', '91', '90']) : kucing > 0 && armor > 0 ? __health : ___health)
-            let exp = (Math.floor(Math.random() * 500) + (kuda * 70))
-            let uang = `${Math.floor(Math.random() * 450)}`.trim() 
+            let exp = (Math.floor(Math.random() * 400) + (kuda * 70))
+            let uang = `${Math.floor(Math.random() * 400)}`.trim() 
             let _potion = `${Math.floor(Math.random() * 2)}`.trim()
             let potion = (_potion * 1)
             let _diamond = (rubah == 0 ? pickRandom(['0', '1', '0', '1', '0', '1', '0']) : '' || rubah == 1 ? pickRandom(['0', '1', '0', '1']) : '' || rubah == 2 ? pickRandom(['0', '1', '0', '1', '2']) : '' || rubah == 3 ? pickRandom(['0', '1', '0', '2', '2', '0']) : '' || rubah == 4 ? pickRandom(['0', '1', '1', '2', '1', '1', '0']) : '' || rubah == 5 ? pickRandom(['0', '0', '1', '2', '2', '1', '1', '0']) : '' )
@@ -27,13 +27,13 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let common = (_common * 1)
             let _uncommon = `${Math.floor(Math.random() * 2)}`.trim()
             let uncommon = (_uncommon * 1) 
-            let _mythic = `${pickRandom(['0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0'])}`
+            let _mythic = `${pickRandom(['1', '0', '0', '1'])}`
             let mythic = (_mythic * 1)
-            let _legendary = `${pickRandom(['0', '0', '0' '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'])}`
+            let _legendary = `${pickRandom(['1', '0', '0', '0'])}`
             let sampah = `${Math.floor(Math.random() * 300)}`.trim()
             let legendary = (_legendary * 1)
             let str = `
-Nyawa mu berkurang -${healt * 1} karena Kamu telah berpetualang sampai ${pickRandom(['Kyoto', 'Tokyo', 'Akihabara', 'Hokkaido', 'Osaka', 'Kawaguchi', 'Gunung Kembar', 'Alam Neraka', 'Hutan Kematian', 'Bulan', 'Padang Gurun', 'Savana', 'Isekai', 'Jakarta', 'Jawa', 'Niggers Country', 'Sipit Country🇹🇼'])} dan mendapatkan
+Nyawa mu berkurang -${healt * 1} karena Kamu telah berpetualang sampai ${pickRandom(['Jepang', 'Korea', 'Bali', 'Amerika', 'Iraq', 'Arab', 'Pakistan', 'German', 'Finlandia', 'Ke bawa dunia mimpi', 'Ujung dunia', 'Mars', 'Bulan', 'Pluto', 'Matahari', 'Hatinya dia', '...'])} dan mendapatkan
 *exp:* ${exp} 
 *uang:* ${uang}
 *sampah:* ${sampah}${potion == 0 ? '' : '\n*Potion:* ' + potion + ''}${diamond == 0 ? '' : '\n*diamond:* ' + diamond + ''}${common == 0 ? '' : '\n*common crate:* ' + common + ''}${uncommon == 0 ? '' : '\n*uncommon crate:* ' + uncommon + ''}
@@ -57,7 +57,7 @@ Nyawa mu berkurang -${healt * 1} karena Kamu telah berpetualang sampai ${pickRan
                 conn.sendButton(m.chat, '*Selamat anda mendapatkan item Epic yaitu*\n' + legendary + ' Legendary Crate', watermark, 'Open', '.open legendary 1', m)
             }
             } else conn.sendButton(m.chat, `Anda sudah berpetualang dan kelelahan, silahkan coba *${timers}* lagi`.trim(), watermark, 'Inventory', '.inv', m)
-        } else conn.send2Button(m.chat, 'Minimal 80 health untuk bisa berpetualang, beli nyawa dulu dengan ketik *' + usedPrefix + 'shop buy potion <jumlah>*\ndan ketik *' + usedPrefix + 'use potion <jumlah>*\n\n_Untuk mendapat money dan potion gratis ketik_ *' + usedPrefix + 'claim*', watermark, 'Heal', '.heal', 'Buy Potion', '.buy potion 1', m)
+        } else conn.send2Button(m.chat, 'Minimal 80 health untuk bisa berpetualang, beli nyawa dulu dengan ketik *' + usedPrefix + 'shop buy potion <jumlah>*\ndan ketik *' + usedPrefix + 'use potion <jumlah>*\n\n_Untuk mendapat money dan potion gratis ketik_ *' + usedPrefix + 'claim*', watermark, 'Heal', '#heal', 'Buy Potion', '.buy potion 1', m)
     } catch (e) {
         console.log(e)
         conn.reply(m.chat, 'Error', m)
@@ -69,9 +69,9 @@ Nyawa mu berkurang -${healt * 1} karena Kamu telah berpetualang sampai ${pickRan
         }
     }
 }
-handler.help = ['adventure', 'petualang', 'berpetualang',]
+handler.help = ['adventure', 'kerja', 'petualang', 'berpetualang', 'mulung', 'work']
 handler.tags = ['rpg']
-handler.command = /^(adventure|(ber)?petualang)$/i
+handler.command = /^(adventure|(ber)?petualang(ang)?|mulung|work|kerja)$/i
 
 handler.fail = null
 

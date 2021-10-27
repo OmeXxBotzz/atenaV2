@@ -3,6 +3,7 @@ let handler = async (m, { conn, text }) => {
 	let monsters = [
 		{ area: 1, name: "Goblin" },
 		{ area: 1, name: "Slime" },
+		{ area: 1, name: "Ayam" },
 		{ area: 1, name: "Wolf" },
 		{ area: 2, name: "Nymph" },
 		{ area: 2, name: "Skeleton" },
@@ -39,7 +40,7 @@ let handler = async (m, { conn, text }) => {
 		{ area: 12, name: "Scaled Kid Dragon" },
 		{ area: 13, name: "Definitely not so young Dragon" },
 		{ area: 13, name: "Teen Dragon" },
-		{ area: 13, name: "Scaled Teen Dragon" },
+		{ area: 13, name: "Scaled Teen Dragon" }
 	]
 	let player = global.db.data.users[m.sender]
 	let pname = conn.getName(m.sender)
@@ -49,9 +50,9 @@ let handler = async (m, { conn, text }) => {
 	let cd1 = Math.ceil(01 - cdm)
 	let cd2 = Math.ceil(60 - cds)
 
-	let area_monsters = monsters.filter(monster => { return monster.area === player.area })
+	let area_monsters = monsters.filter(monster => { return monster[area] === player[area] })
 	let monster = area_monsters[Math.floor(Math.random() * area_monsters.length)]
-	let monsterName = monster.name.toUpperCase()
+	let monsterName = monster[name].toUpperCase()
 
 	if (new Date - global.db.data.users[m.sender].lasthunt > 120000) {
 		let coins = parseInt(Math.floor(Math.random() * 401))
@@ -86,7 +87,7 @@ handler.help = ['hunt']
 handler.tags = ['rpg']
 handler.command = /^hunt/i
 
-handler.disabled = true
+handler.disabled = false
 
 handler.fail = null
 
