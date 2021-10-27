@@ -95,6 +95,7 @@ module.exports = {
             if (!isNumber(user.ikan)) user.ikan = 0
             if (!isNumber(user.orca)) user.orca = 0
 
+			if (!isNumber(user.lasthunt)) user.lasthunt = 0
             if (!isNumber(user.lastadventure)) user.lastadventure = 0
             if (!isNumber(user.lastfishing)) user.lastfishing = 0
             if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
@@ -170,6 +171,7 @@ module.exports = {
             pickaxedurability: 0,
             fishingrod: 0,
             fishingroddurability: 0,
+            lasthunt: 0,
             lastadventure: 0,
             lastfishing: 0,
             lastdungeon: 0,
