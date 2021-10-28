@@ -1,8 +1,8 @@
 // Source Code from NekoBotz (DanishGanz)
 
 global.linkGC = ['https://chat.whatsapp.com/INua3dEj25B0eFrHma0OsC', 'https://chat.whatsapp.com/B9bGT4rmw8PFnTYCYRcNab', 'https://chat.whatsapp.com/B9bGT4rmw8PFnTYCYRcNab'] // ganti jadi group lu
-global.owner = ['6282248192917', '62822481929171', '6285904398191'] // Put your number here
-global.mods = [] // Want some help?
+global.owner = ['6282248192917', '62822481929171'] // Put your number here
+global.mods = ['6285904398191'] // Want some help?
 global.prems = ["6283819142257"] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'

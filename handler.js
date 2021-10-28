@@ -33,6 +33,7 @@ module.exports = {
             if (!isNumber(user.title)) user.title = 'Nothing'
             if (!isNumber(user.limit)) user.limit = 10
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
+            if (!isNumber(user.lastgetmoney)) user.lastgetmoney = 0
             if (!isNumber(user.money)) user.money = 0
             
             if (!isNumber(user.diamond)) user.diamond = 0
@@ -119,6 +120,7 @@ module.exports = {
             exp: 0,
             limit: 10,
             lastclaim: 0,
+            lastgetmoney: 0,
             money: 0,
             diamond: 0,
             iron: 0,
