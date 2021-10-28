@@ -3,7 +3,9 @@ let handler = async (m, { conn, usedPrefix }) => {
 	if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
     let healt = global.db.data.users[m.sender].healt
     let armor = global.db.data.users[m.sender].armor 
-    let pickaxe = global.db.data.users[m.sender].pickaxe
+    let sword = global.db.data.users[m.sender].sword
+    let sdurability = global.db.data.users[m.sender].sworddurability
+	let pickaxe = global.db.data.users[m.sender].pickaxe
     let pdurability = global.db.data.users[m.sender].pickaxedurability
     let fishingrod = global.db.data.users[m.sender].fishingrod
     let fdurability = global.db.data.users[m.sender].fishingroddurability
@@ -56,10 +58,12 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 🏷️Title: *${title}*\n
 ❤️Health: *${healt}*
 💳Role: *${role}*
-🥋Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
-⛏️Pickaxe: *${pickaxe == 0 ? 'Tidak Punya' : '' || pickaxe == 1 ? 'Stone Pickaxe' : '' || pickaxe == 2 ? 'Golden Pickaxe' : '' || pickaxe == 3 ? 'Iron Pickaxe' : '' || armor == 4 ? 'Diamond Pickaxe' : '' || armor == 5 ? 'Netherite Pickaxe' : ''}*
+🥋Armor: *${armor == 0 ? 'Tidak Punya' : 'Cracked Armor' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
+🗡️Sword: *${sword == 0 ? 'Tidak Punya' : 'Cracked Sword' || sword == 1 ? 'Stone Sword' : '' || pickaxe == 2 ? 'Golden Sword' : '' || pickaxe == 3 ? 'Iron Sword' : '' || armor == 4 ? 'Diamond Sword' : '' || armor == 5 ? 'Netherite Sword' : ''}*
+🗡️Sword: *${sdurability}*
+⛏️Pickaxe: *${pickaxe == 0 ? 'Tidak Punya' : 'Cracked Pickaxe' || pickaxe == 1 ? 'Stone Pickaxe' : '' || pickaxe == 2 ? 'Golden Pickaxe' : '' || pickaxe == 3 ? 'Iron Pickaxe' : '' || armor == 4 ? 'Diamond Pickaxe' : '' || armor == 5 ? 'Netherite Pickaxe' : ''}*
 ⛏️Durability: *${pdurability}*
-🎣Fishing Rod: *${fishingrod == 0 ? 'Tidak Punya' : '' || fishingrod == 1 ? 'Pancingan Bambu' : '' || fishingrod == 2 ? 'Pancingan Biasa' : '' || fishingrod == 3 ? 'Pancingan Besi' : '' || fishingrod == 4 ? 'Pancingan Emas' : '' || fishingrod == 5 ? 'Jaring Ikan' : ''}*
+🎣Fishing Rod: *${fishingrod == 0 ? 'Tidak Punya' : 'Empty' || fishingrod == 1 ? 'Pancingan Bambu' : '' || fishingrod == 2 ? 'Pancingan Biasa' : '' || fishingrod == 3 ? 'Pancingan Besi' : '' || fishingrod == 4 ? 'Pancingan Emas' : '' || fishingrod == 5 ? 'Jaring Ikan' : ''}*
 🎣Durability: *${fdurability}*\n
 💰Money: *${money}*
 🪙Limit: *${limit}*

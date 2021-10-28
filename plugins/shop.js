@@ -12,9 +12,10 @@ const Bmythic = 2000
 const Smythic = 500
 const Biron = 500
 const Siron = 300
-const Sbatu = 1
-const Upickaxe = 25000
-const Ufishing = 25000
+const Sbatu = 5
+const Usword = 20000
+const Upickaxe = 18000
+const Ufishing = 15000
 const Blegendary = 7500 
 const Slegendary = 3000
 const Bsampah = 10
@@ -23,9 +24,11 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 	if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
     const _armor = global.db.data.users[m.sender].armor
     const armor = (_armor == 0 ? 20000 : '' || _armor == 1 ? 49999 : '' || _armor == 2 ? 99999 : '' || _armor == 3 ? 149999 : '' || _armor == 4 ? 299999 : '')
+    const _sword = global.db.data.users[m.sender].sword
+	const sword = (_sword == 0 ? 20000 : '' || _sword == 1 ? 49999 : '' || _sword == 2 ? 99999 : '' || _sword == 3 ? 149999 : '' || _sword == 4 ? 299999 : '')
     const _pickaxe = global.db.data.users[m.sender].pickaxe
     const pickaxe = (_pickaxe == 0 ? 20000 : '' || _pickaxe == 1 ? 49999 : '' || _pickaxe == 2 ? 99999 : '' || _pickaxe == 3 ? 149999 : '' || _pickaxe == 4 ? 299999 : '')
-        const _fishingrod = global.db.data.users[m.sender].fishingrod
+    const _fishingrod = global.db.data.users[m.sender].fishingrod
     const fishingrod = (_fishingrod == 0 ? 20000 : '' || _fishingrod == 1 ? 49999 : '' || _fishingrod == 2 ? 99999 : '' || _fishingrod == 3 ? 149999 : '' || _fishingrod == 4 ? 299999 : '')
     let type = (args[0] || '').toLowerCase()
     let _type = (args[1] || '').toLowerCase()
@@ -45,9 +48,12 @@ Mythic:     ${Bmythic}
 Legendary: ${Blegendary}
 Sampah:     ${Bsampah}
 Armor:       ${armor}
+Sword:.    ${sword} +500 durability
 Pickaxe:    ${pickaxe} +500 durability
 Fishingrod: ${fishingrod} +500 durability\n\n
 *Upgrade   | Harga Update*\n
+Upgrade Sword: ${sword}
++500 durability
 Upgrade Pickaxe: ${Upickaxe} 
 +500 durability
 Upgrade Fishing Rod: ${Ufishing} 
@@ -82,6 +88,7 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
 🎁Legendary:    ${Blegendary}
 🗑️Sampah:        ${Bsampah}
 🥋Armor:            ${armor}
+🗡️Sword:          ${sword} +500 durability
 ⛏️Pickaxe:          ${pickaxe} +500 durability
 🎣Fishingrod:      ${fishingrod} +500 durability
 
@@ -89,6 +96,7 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
 
 *Upgrade   |  Harga Update*
 
+🔧Upgrade Sword:        ${Usword} +500 durability
 🔧Upgrade Pickaxe:        ${Upickaxe} +500 durability
 🔧Upgrade Fishing Rod: ${Ufishing} +500 durability
 
@@ -219,6 +227,14 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
                 break
             case 'upgrade':
                switch (_type) {
+               	case 'sword':
+                        if (global.db.data.users[m.sender].sworddurability > 5000) return onn.reply(m.chat, 'Sword mu sudah *Sangat Kuat*', m)
+                        if (global.db.data.users[m.sender].money > Usword * 1) {
+                            global.db.data.users[m.sender].sworddurability += 500
+                            global.db.data.users[m.sender].money -= Usword * 1
+                            conn.reply(m.chat, `Succes menambah durability sword seharga ${Usword} money` ,m)
+                        } else conn.reply(m.chat, `uang mu tidak cukup untuk menambah durability sword seharga ${Usword} money`, m)
+                        break
                	case 'fishingrod':
                         if (global.db.data.users[m.sender].fishingroddurability > 5000) return onn.reply(m.chat, 'Fishing rodmu sudah *Sangat Kuat*', m)
                         if (global.db.data.users[m.sender].money > Ufishing * 1) {
@@ -397,6 +413,16 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
                         } else conn.reply(m.chat, `uang mu tidak cukup untuk membeli armor seharga ${armor} money`, m)
                     
                     break
+				case 'sword':
+                        if (global.db.data.users[m.sender].sword == 5) return conn.reply(m.chat, 'Sword mu sudah *Level Max*', m)
+                        if (global.db.data.users[m.sender].money > sword * 1) {
+                            global.db.data.users[m.sender].sword += 1
+                            global.db.data.users[m.sender].sworddurability += ( 0 ? 500 : '' || 1 ? 1000 : '' || 2 ? 1500 : '' || 3 ? 2000 : '' || 4 ? 2500 : '' || 5 ? 3000 : '')
+                            global.db.data.users[m.sender].money -= sword * 1
+                            conn.reply(m.chat, `Succes membeli Sword seharga ${sword} money` ,m)
+                                                      
+                        } else conn.reply(m.chat, `uang mu tidak cukup untuk membeli Sword seharga ${sword} money`, m)
+                        break
                 case 'pickaxe':
                         if (global.db.data.users[m.sender].pickaxe == 5) return conn.reply(m.chat, 'Pickaxemu sudah *Level Max*', m)
                         if (global.db.data.users[m.sender].money > pickaxe * 1) {
@@ -492,6 +518,16 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
             } else if (/upgrade/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
+            	case 'sword':
+                        if (global.db.data.users[m.sender].sworddurability > 5000) {
+                        if (global.db.data.users[m.sender].money > Usword * 1) {
+                            global.db.data.users[m.sender].sworddurability += 500
+                            global.db.data.users[m.sender].money -= Usword * 1
+                            conn.reply(m.chat, `Succes menambah durability sword seharga ${Ufishing} money` ,m)
+                          
+                        } else conn.reply(m.chat, `uang mu tidak cukup untuk menambah durability pickaxe seharga ${Ufishing} money`, m)
+                        } else conn.reply(m.chat, 'Sword mu sudah *Sangat Kuat*', m)
+                        break
             	case 'fishingrod':
                         if (global.db.data.users[m.sender].fishingroddurability > 5000) {
                         if (global.db.data.users[m.sender].money > Ufishing * 1) {
@@ -499,7 +535,7 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
                             global.db.data.users[m.sender].money -= Ufishing * 1
                             conn.reply(m.chat, `Succes menambah durability pickaxe seharga ${Ufishing} money` ,m)
                           
-                        } else conn.reply(m.chat, `uang mu tidak cukup untuk menambah durability pickaxe seharga ${Ufishing} money`, m)
+                        } else conn.reply(m.chat, `uang mu tidak cukup untuk menambah durability Fishing Rod seharga ${Ufishing} money`, m)
                         } else conn.reply(m.chat, 'Fishing rodmu sudah *Sangat Kuat*', m)
                         break
                	case 'pickaxe':

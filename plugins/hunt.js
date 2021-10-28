@@ -1,47 +1,8 @@
 let handler = async (m, { conn, text }) => {
 
-	let monsters = [
-		{ area: 1, name: "Goblin" },
-		{ area: 1, name: "Slime" },
-		{ area: 1, name: "Ayam" },
-		{ area: 1, name: "Wolf" },
-		{ area: 2, name: "Nymph" },
-		{ area: 2, name: "Skeleton" },
-		{ area: 2, name: "Wolf" },
-		{ area: 3, name: "Baby Demon" },
-		{ area: 3, name: "Ghost" },
-		{ area: 3, name: "Zombie" },
-		{ area: 4, name: "Imp" },
-		{ area: 4, name: "Witch" },
-		{ area: 4, name: "Zombie" },
-		{ area: 5, name: "Ghoul" },
-		{ area: 5, name: "Giant Scorpion" },
-		{ area: 5, name: "Unicorn" },
-		{ area: 6, name: "Baby Robot" },
-		{ area: 6, name: "Sorcerer" },
-		{ area: 6, name: "Unicorn" },
-		{ area: 7, name: "Cecaelia" },
-		{ area: 7, name: "Giant Piranha" },
-		{ area: 7, name: "Mermaid" },
-		{ area: 8, name: "Giant Crocodile" },
-		{ area: 8, name: "Nereid" },
-		{ area: 8, name: "Mermaid" },
-		{ area: 9, name: "Demon" },
-		{ area: 9, name: "Harpy" },
-		{ area: 9, name: "Killer Robot" },
-		{ area: 10, name: "Dullahan" },
-		{ area: 10, name: "Manticore" },
-		{ area: 10, name: "Killer Robot" },
-		{ area: 11, name: "Baby Dragon" },
-		{ area: 11, name: "Young Dragon" },
-		{ area: 11, name: "Scaled Baby Dragon" },
-		{ area: 12, name: "Kid Dragon" },
-		{ area: 12, name: "Not so young Dragon" },
-		{ area: 12, name: "Scaled Kid Dragon" },
-		{ area: 13, name: "Definitely not so young Dragon" },
-		{ area: 13, name: "Teen Dragon" },
-		{ area: 13, name: "Scaled Teen Dragon" }
-	]
+	let monsters = {[
+		{ area: 1, name: "Goblin" }
+	]}
 	let player = global.db.data.users[m.sender]
 	let pname = conn.getName(m.sender)
 
@@ -50,9 +11,9 @@ let handler = async (m, { conn, text }) => {
 	let cd1 = Math.ceil(01 - cdm)
 	let cd2 = Math.ceil(60 - cds)
 
-	let area_monsters = monsters.filter(monster => { return monster[area] === player[area] })
+	let area_monsters = monsters.filter(monster => { return monster.area === player.area })
 	let monster = area_monsters[Math.floor(Math.random() * area_monsters.length)]
-	let monsterName = monster[name].toUpperCase()
+	let monsterName = monster.name.toUpperCase()
 
 	if (new Date - global.db.data.users[m.sender].lasthunt > 120000) {
 		let coins = parseInt(Math.floor(Math.random() * 401))

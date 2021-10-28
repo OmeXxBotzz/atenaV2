@@ -11,6 +11,6 @@ handler.help = ['topup <Args>']
 handler.tags = ['rpg']
 handler.command = /^topup$/i
 handler.mods = true
-handler.premium = true
+handler.premium = false
 
 module.exports = handler
