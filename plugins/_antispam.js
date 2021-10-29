@@ -12,8 +12,8 @@ handler.all = async function (m) {
         this.spam[m.sender].count++
         if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
             if (this.spam[m.sender].count > 10) {
-                //db.data.users[m.sender].banned = true
-                await this.sendButton(m.chat, 'Jangan spam', '© nekobotz', 'Pemilik Bot', ',owner')
+                db.data.users[m.sender].banned = true
+                await this.sendButton(m.chat, 'Jangan spam', watermark, 'Pemilik Bot', '.owner')
             }
             this.spam[m.sender].count = 0
             this.spam[m.sender].lastspam = m.messageTimestamp.toNumber()
