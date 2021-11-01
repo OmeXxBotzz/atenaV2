@@ -1,6 +1,7 @@
 const { MessageType } = require('@adiwajshing/baileys')
 const PhoneNumber = require('awesome-phonenumber')
 async function handler(m) {
+	this.reply("Ini Owner (Developer Bot), bukan bot yah anyink Jika ingin menanyakan sesuatu tentang bot chat aj yg Khael² (Fast Resp when online)")
   let name = 'Khael'
   number = owner[0].replace(/[^0-9]/g, '')
   let njid = number + '@s.whatsapp.net'
