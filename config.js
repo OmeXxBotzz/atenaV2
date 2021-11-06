@@ -38,7 +38,7 @@ global.author = '© Atena Bot\nwa.me/628114811363\n┏┅┅┅┅┅┅┅┅�
 //global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn' // ganti aja
 
 // msg
-global.wait = '*_Ｗａｉt...*_'
+global.wait = '_*Ｗａｉt...*_'
 global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!'
 global.nsfw = 'Fitur NSFW Dimatikan.'
 global.eror = '_*Server Error*_'
