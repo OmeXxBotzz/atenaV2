@@ -14,14 +14,14 @@
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "Fadli",
+  "author": "Khael",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ariffb25/stikerinbot/issues"
   },
   "homepage": "https://github.com/ariffb25/stikerinbot",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.2",
+    "@adiwajshing/baileys": "^3.5.3",
     "awesome-phonenumber": "^2.54.0",
     "axios": "^0.21.1",
     "brainly-scraper-v2": "^2.0.3",
