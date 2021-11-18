@@ -576,6 +576,48 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${lm3 > 0 ? `\nMoney: ${lm3
                         }
                     } else conn.reply(m.chat, 'Legendary crate anda tidak cukup', m)
                     break
+					case '10000':
+                    let _lm4 = `${Math.floor(Math.random() * 4000000)}`.trim()
+                    let _le4 = `${Math.floor(Math.random() * 10000000)}`.trim()
+                    let _lp4 = `${Math.floor(Math.random() * 1000)}`.trim()
+                    let _lu4 = `${Math.floor(Math.random() * 20000)}`.trim()
+                    let _lc4 = `${Math.floor(Math.random() * 5000)}`.trim()
+                    let _ll4 = `${Math.floor(Math.random() * 102)}`.trim()
+                    let _lpp4 = `${Math.floor(Math.random() * 444)}`.trim()
+                    let _ld4 = `${Math.floor(Math.random() * 1000)}`.trim()
+                    let _lmm4 = `${Math.floor(Math.random() * 222)}`.trim()
+                    let lm4 = (_lm4 * 1)
+                    let le4 = (_le4 * 1)
+                    let lp4 = (_lp4 * 1) 
+                    let lu4 = (_lu4 * 1) 
+                    let lc4 = (_lc4 * 1) 
+                    let ll4 = (_ll4 * 1) 
+                    let lpp4 = (_lpp4 * 1)       
+                    let ld4 = (_ld4 * 1) 
+                    let lmm4 = (_lmm4 * 1)
+                    let Lechat4 = `
+Anda telah membuka *Legendary crate* dan mendapatkan:${lm4 > 0 ? `\nMoney: ${lm4}` : ''}${le4 > 0 ? `\nExp: ${le4} *exp*` : ''}${ld4 > 0 ? `\nDiamond: ${ld4} *diamond*` : ''}${lp4 > 0 ? `\nPotion: ${lp4} *potion*` : ''}${lc4 > 0 ? `\nCommon crate: ${lc4} *crate*` : ''}${lu4 > 0 ? `\nUncommon crate: ${lu4} *crate*` : ''}
+`.trim()  
+                    if (global.db.data.users[m.sender].legendary >= 10000) {
+                        global.db.data.users[m.sender].legendary -= 10000
+                        global.db.data.users[m.sender].money += lm4 * 15
+                        global.db.data.users[m.sender].diamond += ld4 * 1
+                        global.db.data.users[m.sender].exp += le4 * 15
+                        global.db.data.users[m.sender].potion += lp4 * 1
+                        global.db.data.users[m.sender].common += lc4 * 1
+                        global.db.data.users[m.sender].uncommon += lu4 * 1
+                        conn.reply(m.chat, Lechat4, m)
+                        if (lmm4 > 0) {
+                            m.reply(`*Selamat anda mendapatkan item Rare yaitu*\n${lmm4} Mythic Crate`)
+                            global.db.data.users[m.sender].mythic += lmm4 * 1
+                        }
+                        if (ll4 > 0 || lpp4 > 0) {
+                             m.reply(`*Selamat anda mendapatkan item Epic yaitu*${ll4 > 0 ? `\n${ll4} Legendary Crate` : ''}${lpp4 > 0 ? `\n${lpp4} Pet Crate` : ''}`)
+                            global.db.data.users[m.sender].legendary += ll4 * 1
+                            global.db.data.users[m.sender].pet += lpp4 * 1
+                        }
+                    } else conn.reply(m.chat, 'Legendary crate anda tidak cukup', m)
+                    break
                 default:
                     return conn.reply(m.chat, Lmao, m)
             }
