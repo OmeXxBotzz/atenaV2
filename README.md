@@ -2,7 +2,7 @@
 
 Simple WhatsApp Bot
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BapakLuPedo/atenaV2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CAPTbarcer/atenaV2)
 
 [![Run on Repl.it](https://repl.it/badge/github/BapakLuPedo/atenaV2)](https://repl.it/github/BapakLuPedo/atenaV2)
 
