@@ -61,7 +61,7 @@ handler.all = async function (m, { isBlocked }) {
     let reg3 = /(terimakasih|makasih|sankyu)/i
     let isSalam3 = reg3.exec(m.text)
     if (isSalam3 && !m.fromMe) {
-        m.reply(`_Damai Sejahtera di Hati_`)
+        m.reply(`Yoii`)
     }
 
     // backup db

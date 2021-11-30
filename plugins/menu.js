@@ -8,24 +8,24 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┍━━〔%me〕━⬢
-│⬦ ${ucapan()} %name!
+┍───❲ %me ❳───⟢
+│⚬ ${ucapan()} %name!
 │
-│⬦ Tersisa *%limit Limit*
-│⬦ Role *%role*
-│⬦ Level *%level (%exp / %maxexp)* [%xp4levelup]
-│⬦ %totalexp XP secara Total
+│⚬ Tersisa *%limit Limit*
+│⚬ Role *%role*
+│⚬ Level *%level (%exp / %maxexp)* [%xp4levelup]
+│⚬ %totalexp XP secara Total
 │ 
-│⬦ Tanggal: *%week %weton, %date*
-│⬦ Tanggal Islam: *%dateIslamic*
-│⬦ Waktu: *%time*
+│⚬ Tanggal: *%week %weton, %date*
+│⚬ Tanggal Islam: *%dateIslamic*
+│⚬ Waktu: *%time*
 │
-│⬦ Uptime: *%uptime (%muptime)*
-│⬦ Database: %rtotalreg dari %totalreg
-┕━━━⬢`.trimStart(),
-  header: '┍━━〔 %category 〕━⬢',
-  body: '│⬦%cmd %islimit %isPremium',
-  footer: '┕━━⬢\n',
+│⚬ Uptime: *%uptime (%muptime)*
+│⚬ Database: %rtotalreg dari %totalreg
+┕──────⟢\n`.trimStart(),
+	header: '┍───❲ %category ❳───⟢',
+	body: '│⚬ %cmd %islimit %isPremium',
+	footer: '┕──────⟢\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -45,6 +45,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'main': 'Utama',
     'game': 'Game',
     'xp': 'Exp & Limit',
+    'anime': 'Anime',
     'nsfw': `NSFW ${global.opts['nsfw'] ? '' : '(Dinonaktifkan)'}`,
     'sticker': 'Stiker',
     'edukasi': 'Edukasi',
@@ -215,8 +216,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') {
-    	let no = 0
-      return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
+		let no = 0
+			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `${ucapan()} ${name}`,
                         "description": "Berikut ini adalah sub-menu yang terdapat pada Bot Atena",
