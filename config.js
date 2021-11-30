@@ -6,7 +6,7 @@
 global.linkGC = ['https://chat.whatsapp.com/I0mpMnpPncB9qzAAtd6c14', 'https://chat.whatsapp.com/FtztbBRlAis2o9r6ebLhzj', 'https://chat.whatsapp.com/IfZhXNWaOCMH69jtHbv9xk'] // ganti jadi group lu
 global.owner = ['6282248192917', '62822481929171'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
-global.prems = ['6283819142257', '6285695484734', '6285604708139', '6285904398191'] // Premium user has unlimited limit
+global.prems = ['62857641165094', '6283819142257', '6285695484734', '6285604708139', '6285904398191'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   hanzz: 'https://hanzzganz.herokuapp.com',
@@ -28,7 +28,7 @@ global.APIKeys = { // APIKey Here
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': 'Dawnfrostkey',
-  'https://api.lolhuman.xyz': '929b48b9aa5a91abed8526cd',
+  'https://api.lolhuman.xyz': 'KontoleBaperan',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'ShiroNeko',
   'https://pencarikode.xyz': 'APIKEY',
@@ -43,11 +43,11 @@ global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 //global.author = '© Atena Bot\nwa.me/628114811363\n┏┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n┇\n┇					Ⓢⓐⓞⓣⓞⓜⓔ\n┇							Ⓐⓣⓔⓝⓐ\n┇\n┗┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\nғᴏʟʟᴏᴡ ɪɢ ᴏᴡɴᴇʀ: @ᴋʜᴀᴇʟʟʟ._\n𝚋𝚢 𝙺𝚑𝚊𝚎𝚕𝚂𝚊𝚗\n'
 
 // msg
-global.wait = '_*Ｗａｉt...*_'
+global.wait = '```Wait a few seconds...```'
 global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!'
 global.nsfw = 'Fitur NSFW Dimatikan.'
-global.eror = '_*Server Error*_'
-global.watermark = '© AtenaBot'
+global.eror = '```Looks like something error...```'
+global.watermark = '© Atena'
 
 global.imagebot = 'https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
