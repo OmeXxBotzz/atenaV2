@@ -1,14 +1,8 @@
-let handler = async (m, { conn, usedPrefix, isAdmin, isOwner }) => {
-    if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-            global.dfail('admin', m, conn)
-            throw false
-        }
-    }
+let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
     if (!(id in conn.absen)) {
-        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, watermark, 'Mulai', `${usedPrefix}mulaiabsen`, m)
+        await conn.sendButton(m.chat, `Tidak ada absen berlangsung digrup ini!\n\nketik *${usedPrefix}mulaiabsen* untuk memulai absen`.trim(), watermark, 'Mulai', `${usedPrefix}mulaiabsen`, m)
         throw false
     }
     delete conn.absen[id]
@@ -16,6 +10,7 @@ let handler = async (m, { conn, usedPrefix, isAdmin, isOwner }) => {
 }
 handler.help = ['hapusabsen']
 handler.tags = ['absen']
-handler.command = /^(delete|hapus|-)absen$/i
-
+handler.command = /^(delete|hapus)absen$/i
+handler.group = true
+handler.admin = true
 module.exports = handler
