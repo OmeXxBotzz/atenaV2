@@ -222,7 +222,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                     "listMessage":  {
                         "title": `${ucapan()} ${name}`,
                         "description": "Berikut ini adalah sub-menu yang terdapat pada Bot Atena",
-						"footerText": `Untuk melihat sub-menu, silahkan ketuk tombol "SUB-MENU"\ndan jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
+						"footerText": `Untuk melihat sub-menu, silahkan tekan tombol "SUB-MENU"\ndan jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
                         "buttonText": "SUB-MENU",
                         "listType": "SINGLE_SELECT",
                         "sections": [
