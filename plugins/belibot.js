@@ -6,7 +6,6 @@ let handler = async (m, { conn }) => {
 │⬦ *1 Monthly* : *Rp 15000*
 │⬦ *Life Time* :  *Rp 25000*
 │⬦ *Premium* :   *Rp 20000*
-│⬦ *Moderator* : *Rp 30000* (stok terbatas)
 │⬦ *Sc Bot* :        *Rp 50000*
 │
 ┝━━〔Payments/Pembayaran〕━⬢
@@ -22,6 +21,6 @@ Note: Syarat dan Ketentuan Berlaku`.trim(), watermark, 'Dana', '.viadana', 'Ovo'
 
 handler.help = ['sewabot']
 handler.tags = ['info']
-handler.command = /^(premium|sewa|sewabot|belibot)?$/i
+handler.command = /^(premium|sewa|sewabot|belibot)$/i
 
 module.exports = handler

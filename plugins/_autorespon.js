@@ -27,25 +27,23 @@ handler.all = async function (m, { isBlocked }) {
     }
 
     // ketika ada yang invite/kirim link grup di chat pribadi
-    //if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-//        this.send3ButtonLoc(m.chat, await (await fetch(imagebot)).buffer(), `
-//┍━━〔List Sewa/Prem〕━⬢
-//│⬦ *1 Bulan* :      *Rp 10000*
-//│⬦ *Permanen* : *Rp 20000*
-//│⬦ *Premium* :   *Rp 25000*
-//│⬦ *Moderator* : *Rp 30000* (stok terbatas)
-//│⬦ *Sc Bot* :        *Rp 50000*
-//│
-//┝━━〔Payments/Pembayaran〕━⬢
-//│⬦ Ovo
-//│⬦ Dana
-//│⬦ Gopay
-//│⬦ Pulsa Tsel (rate)
-//│
-//┕━━━⬢
-//
-//Note: Syarat dan Ketentuan Berlaku`.trim(), watermark, 'Dana', '.viadana', 'Ovo', '.viaovo', '.viagopay', '.gopay', m)
-//}
+    if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
+        this.send3ButtonLoc(m.chat, await (await fetch(imagebot)).buffer(), `
+┍━━〔List Sewa/Prem〕━⬢
+│⬦ *1 Bulan* :      *Rp 10000*
+│⬦ *Permanen* : *Rp 20000*
+│⬦ *Premium* :   *Rp 25000*
+│⬦ *Sc Bot* :        *Rp 50000*
+│
+┝━━〔Payments/Pembayaran〕━⬢
+│⬦ Ovo
+│⬦ Dana
+│⬦ Gopay
+│⬦ Pulsa Tsel (rate)
+│
+┕━━━⬢
+Note: Syarat dan Ketentuan Berlaku`.trim(), watermark, 'Dana', '.viadana', 'Ovo', '.viaovo', '.viagopay', '.gopay', m)
+	}
 
     // salam
     let reg = /(ass?alam|اَلسَّلاَمُ عَلَيْكُمْ|السلام عليکم)/i

@@ -4,6 +4,7 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
+let hit = 0
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
@@ -11,7 +12,6 @@ const defaultMenu = {
 ┍───❲ %me ❳───⟢
 │⚬ ${ucapan()} %name!
 │
-│⚬ Money ${money}
 │⚬ Tersisa *%limit Limit*
 │⚬ Role *%role*
 │⚬ Level *%level (%exp / %maxexp)* [%xp4levelup]
@@ -21,6 +21,7 @@ const defaultMenu = {
 │⚬ Tanggal Islam: *%dateIslamic*
 │⚬ Waktu: *%time*
 │
+│⚬ Hit Menu: *${hit+=1}*
 │⚬ Uptime: *%uptime (%muptime)*
 │⚬ Database: %rtotalreg dari %totalreg
 ┕──────⟢\n`.trimStart(),
@@ -56,7 +57,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
     'rpg': 'Epic Rpg',
     'group': 'Grup',
-    'anime': 'Anime',
     'premium': 'Premium',
     'internet': 'Internet',
     'image': 'Random Image',
@@ -167,7 +167,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let { exp, limit, level, role, registered, money } = global.db.data.users[m.sender]
+    let { exp, limit, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -222,7 +222,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                     "listMessage":  {
                         "title": `${ucapan()} ${name}`,
                         "description": "Berikut ini adalah sub-menu yang terdapat pada Bot Atena",
-						"footerText": `Untuk melihat sub-menu, silahkan ketuk tombol "SUB-MENU". Jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
+						"footerText": `Untuk melihat sub-menu, silahkan ketuk tombol "SUB-MENU"\ndan jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
                         "buttonText": "SUB-MENU",
                         "listType": "SINGLE_SELECT",
                         "sections": [
@@ -259,10 +259,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Stiker",
                                     "rowId": ".? stiker"
                                 }, {
-                                    "title": `Menu ${no+=1}. │💾│`,
-                                    "description": "Downloader Sosmed",
-                                    "rowId": ".? downloader"
-                                }, {
                                     "title": `Menu ${no+=1}. │🔞│`,
                                     "description": "NSFW - 18+",
                                     "rowId": ".? nsfw"
@@ -291,7 +287,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Kerang ajaib",
                                     "rowId": ".? kerangajaib"
                                 }, {
-                                    "title": `Menu ${no+=1}. │📑│`,
+                                    "title": `Menu ${no+=1}. │📑 │`,
                                     "description": "Quotes",
                                     "rowId": ".? quotes"
                                 }, {
@@ -322,6 +318,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "title": `Menu ${no+=1}. │✍️│`,
                                     "description": "Menulis & Membuat Logo",
                                     "rowId": ".? nulis"
+                                }, {
+                                    "title": `Menu ${no+=1}. │💾│`,
+                                    "description": "Downloader Sosmed",
+                                    "rowId": ".? downloader"
                                 }, {
                                     "title": `Menu ${no+=1}. │📁│`,
                                     "description": "Database",

@@ -178,7 +178,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 			if (!res.ok) throw await res.text()
 			let img = await res.buffer()
 			if (!img) throw img
-				conn.sendButtonImg(m.chat, await(img), 'Nih ' + args[0].toLowerCase() + ' nya', watermark, '⏩Get Again', `${usedPrefix}gacha ` + args[0].toLowerCase(), m { thumbnail: img })
+				conn.sendButtonImg(m.chat, await(img), 'Nih ' + args[0].toLowerCase() + ' nya', watermark, '⏩Get Again', `${usedPrefix}gacha ` + args[0].toLowerCase(), m, { thumbnail: img })
             break
 		case 'genshin':
 		case 'furry':
