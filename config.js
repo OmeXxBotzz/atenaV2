@@ -1,12 +1,15 @@
-//──────────────────────────────────────────────────\\
-//──────────────────────────────────────────────────\\
 //											© KhaelSan - © AtenaBot													  \\
-//──────────────────────────────────────────────────\\
-//──────────────────────────────────────────────────\\
 global.linkGC = ['https://chat.whatsapp.com/I0mpMnpPncB9qzAAtd6c14', 'https://chat.whatsapp.com/FtztbBRlAis2o9r6ebLhzj', 'https://chat.whatsapp.com/IfZhXNWaOCMH69jtHbv9xk'] // ganti jadi group lu
 global.owner = ['6282248192917', '62822481929171'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
-global.prems = ['62857641165094', '6283819142257', '6285695484734', '6285604708139', '6285904398191'] // Premium user has unlimited limit
+global.prems = [
+							'62857641165094', // Premium user has unlimited limit
+							'6283819142257',
+							'6285695484734',
+							'6285604708139',
+							'6285904398191',
+							'6281327616530'
+							 ]
 global.APIs = { // API Prefix
   // name: 'https://website'
   hanzz: 'https://hanzzganz.herokuapp.com',
