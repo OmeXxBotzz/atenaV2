@@ -58,7 +58,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                                 }, {
                                     "title": `Gacha ${no+=1}.`,
                                     "description": "Elaina",
-                                    "rowId": "Test"
+                                    "rowId": `${usedPrefix}gacha elaina`
                                 }, {
                                     "title": `Gacha ${no+=1}.`,
                                     "description": "Kanna",
