@@ -1,13 +1,15 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
+	var isNsfw = global.db.data.chats["6282248192917@s.whatsapp.net"].nsfw
+	if (isNsfw === true) {
 	if (!args[0]) {
 			let no = 0
 				return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": "Daftar Gacha Nsfw",
-                        "description": "Contoh penggunaan:\n" + usedPrefix + "nsfwgacha neko",
-						"footerText": `Pencet tombol "LIST-GACHA" untuk menampilkan daftar gacha. Ngaceng kok sama kartun`,
+                        "description": `Pencet tombol "LIST-GACHA" untuk menampilkan daftar gacha`,
+						"footerText": "Yahahaha ngatjeng kok sama kartun👎🏿",
                         "buttonText": "LIST-GACHA",
                         "listType": "SINGLE_SELECT",
                         "sections": [
@@ -145,14 +147,16 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
 			break
         default:
             throw er
+		}
     }
+    else conn.reply(m.chat, global.nsfw, m)
 }
 handler.help = ['nsfwgacha'].map(v => v + ' <type>')
 handler.tags = ['hentai']
 handler.command = /^nsfwgacha$/i
 
-handler.nsfw = true
-handler.limit = true
+//handler.nsfw = true
+handler.limit = 3
 
 module.exports = handler
 //Credit: By KhaelSan

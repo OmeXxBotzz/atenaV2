@@ -11,10 +11,10 @@ handler.all = async function (m) {
     let name = conn.getName(m.sender)
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
     await this.sendButton(m.chat, `
-${ucapan()} ${name}, semoga Harimu menyenangkan
+${ucapan()} ${name}, Have a Great Day !
 
-${user.banned ? 'kamu dibanned' : 'Ada yang bisa saya bantu?\n_Atena adalah Bot WhatsApp yang memudahkan pembuatan stiker, download media dari sosmed, dan masih banyak yang bisa dilakukan.'}
-`.trim(), watermark, user.banned ? 'Pemilik Bot' : '/START', user.banned ? '.owner' : '.?', m)
+${user.banned ? 'Kamu terbanned, chat owner untuk membuka banned' : 'Ada yang bisa saya bantu?\n_Atena adalah Bot WhatsApp yang memudahkan pembuatan stiker, download media dari sosmed, dan masih banyak yang bisa dilakukan.'}
+`.trim(), watermark, user.banned ? 'Pemilik Bot' : '</START>', user.banned ? '.owner' : '.?', m)
     user.pc = new Date * 1
 }
 

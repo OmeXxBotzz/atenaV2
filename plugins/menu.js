@@ -4,12 +4,12 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
-let hit = 0
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┍───❲ %me ❳───⟢
+┍───❲ Dashboard ❳───⟢
+│⚬ Nama Bot: %me
 │⚬ ${ucapan()} %name!
 │
 │⚬ Tersisa *%limit Limit*
@@ -21,7 +21,6 @@ const defaultMenu = {
 │⚬ Tanggal Islam: *%dateIslamic*
 │⚬ Waktu: *%time*
 │
-│⚬ Hit Menu: *${hit+=1}*
 │⚬ Uptime: *%uptime (%muptime)*
 │⚬ Database: %rtotalreg dari %totalreg
 ┕──────⟢\n`.trimStart(),
@@ -234,7 +233,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                 }, {
                                     "title": "Rules - S&K",
                                     "description": "User yang bijak selalu mematuhi Rules.",
-                                    "rowId": ".snk"
+                                    "rowId": ".rules"
                                 }, {
                                     "title": "Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
