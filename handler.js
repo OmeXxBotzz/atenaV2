@@ -572,7 +572,7 @@ Untuk mematikan fitur ini, ketik
           return
         break
     }
-    await this.sendMessage(from, 'Maaf, karena anda menelfon bot. anda diblokir otomatis', MessageType.extendedText)
+    await this.sendMessage(from, 'Maaf, karena anda menelfon bot anda diblokir otomatis\nChat owner jika tidak sengaja menelpon https://wa.me/6282248192917?text=banh+buka+blocknya+dong', MessageType.extendedText)
     await this.blockUser(from, 'add')
   }
 }
