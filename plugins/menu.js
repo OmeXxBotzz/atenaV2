@@ -231,13 +231,17 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Status dan informasi Bot Atena.",
                                     "rowId": ".botstatus"
                                 }, {
-                                    "title": "Rules - S&K",
+                                    "title": "Rules",
                                     "description": "User yang bijak selalu mematuhi Rules.",
                                     "rowId": ".rules"
                                 }, {
                                     "title": "Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
+                                }, {
+                                    "title": "Link Gc Atena",
+                                    "description": "",
+                                    "rowId": ".linkgcbot"
                                 }],
                                 "title": "⟣────────❲ Tentang Bot dan lainnya ❳────────⟢"
                             }, {
