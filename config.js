@@ -32,7 +32,8 @@ global.APIs = { // API Prefix
   fxc7: 'https://fxc7-api.herokuapp.com',
   LeysCoder: 'https://leyscoders-api.herokuapp.com',
   janbot: 'https://janbot-api.herokuapp.com',
-  dap: 'https://api.dapuhy.ga'
+  dap: 'https://api.dapuhy.ga',
+  jojo: 'https://docs-jojoapi.herokuapp.com'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey' (apikey kalian)
@@ -47,6 +48,7 @@ global.APIKeys = { // APIKey Here
   'https://fxc7-api.herokuapp.com': 'fxc7COOL',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll',
   'https://api.dapuhy.ga': 'Kontolodon'
+  'https://docs-jojoapi.herokuapp.com': 'Syaa'
 }
 
 // Sticker WM
