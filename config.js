@@ -47,7 +47,7 @@ global.APIKeys = { // APIKey Here
   'https://pencarikode.xyz': 'APIKEY',
   'https://fxc7-api.herokuapp.com': 'fxc7COOL',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll',
-  'https://api.dapuhy.ga': 'Kontolodon'
+  'https://api.dapuhy.ga': 'Kontolodon',
   'https://docs-jojoapi.herokuapp.com': 'Syaa'
 }
 
