@@ -219,10 +219,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 		let no = 0
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        //"title": `${ucapan()} ${name}`,
-                        "title": "Hari Kamis sampai hari Minggu Owner Sibuk, jadi server tidak terurus dan database akan terus direset",
-                        "description": "Berikut ini adalah sub-menu yang terdapat pada Bot Atena",
-						"footerText": `Untuk melihat sub-menu, silahkan tekan tombol "SUB-MENU"\ndan jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
+                        "title": "",
+                        "description": `${ucapan()} ${name}`,
+						"footerText": `Berikut ini adalah sub-menu yang terdapat pada Bot Atena\n\nUntuk melihat sub-menu, silahkan tekan tombol "SUB-MENU"\ndan jangan lupa juga untuk baca dan ikuti rules pada Bot Atena`,
                         "buttonText": "SUB-MENU",
                         "listType": "SINGLE_SELECT",
                         "sections": [
