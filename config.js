@@ -1,5 +1,5 @@
 //											© KhaelSan - © AtenaBot													  \\
-global.owner = ['6282248192917', '62822481929171'] // Put your number here
+global.owner = ['32460222094', '62822481929171', '6282248192917'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
 
 global.prems = [
