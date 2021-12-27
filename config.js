@@ -2,7 +2,7 @@
 global.owner = ['32460222094', '62822481929171', '6282248192917'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
 
-global.prems = [
+global.prems = ['6285274817872', 
 							'62857641165094', // Premium user has unlimited limit
 							'6283819142257',
 							'6285695484734',
