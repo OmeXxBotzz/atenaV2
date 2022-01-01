@@ -8,9 +8,10 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┎──❲ Dashboard ❳──⟤
+  👋 ${ucapan()} %name!
+  
+┎──⟮ Dashboard ⟯──⟤
 │• Nama Bot: %me
-│• ${ucapan()} %name!
 │
 │• Tersisa *%limit Limit*
 │• Role *%role*
@@ -24,11 +25,11 @@ const defaultMenu = {
 │• Uptime: *%uptime (%muptime)*
 │• Database: %rtotalreg dari %totalreg
 ┖──────⟤\n`.trimStart(),
-	header: '┎───❲ %category ❳──⟤',
+	header: '┎───⟮ %category ⟯──⟤',
 	body: '│%cmd %islimit %isPremium',
 	footer: '┖──────⟤\n',
   after: `
-${watermark} 2022
+Happy New Year🥳
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
