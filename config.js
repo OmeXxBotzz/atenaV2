@@ -2,7 +2,8 @@
 global.owner = ['32460222094', '62822481929171', '6282248192917'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
 
-global.prems = ['6285274817872', 
+global.prems = ['6285274817872',
+							'6285274817872', 
 							'62857641165094', // Premium user has unlimited limit
 							'6283819142257',
 							'6285695484734',
@@ -41,7 +42,7 @@ global.APIKeys = { // APIKey Here
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': 'Dawnfrostkey',
-  'https://api.lolhuman.xyz': 'KontoleBaperan',
+  'https://api.lolhuman.xyz': 'KirBotzzz01',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'ShiroNeko',
   'https://pencarikode.xyz': 'APIKEY',
