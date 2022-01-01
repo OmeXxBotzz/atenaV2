@@ -8,28 +8,27 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┍───❲ Dashboard ❳───⟢
-│⚬ Nama Bot: %me
-│⚬ ${ucapan()} %name!
+┎──❲ Dashboard ❳──⟤
+│• Nama Bot: %me
+│• ${ucapan()} %name!
 │
-│⚬ Tersisa *%limit Limit*
-│⚬ Role *%role*
-│⚬ Level *%level (%exp / %maxexp)* [%xp4levelup]
-│⚬ %totalexp XP secara Total
+│• Tersisa *%limit Limit*
+│• Role *%role*
+│• Level *%level (%exp / %maxexp)* [%xp4levelup]
+│• %totalexp XP secara Total
 │ 
-│⚬ Tanggal: *%week %weton, %date*
-│⚬ Tanggal Islam: *%dateIslamic*
-│⚬ Waktu: *%time*
+│• Tanggal: *%week %weton, %date*
+│• Tanggal Islam: *%dateIslamic*
+│• Waktu: *%time*
 │
-│⚬ Uptime: *%uptime (%muptime)*
-│⚬ Database: %rtotalreg dari %totalreg
-┕──────⟢\n`.trimStart(),
-	header: '┍───❲ %category ❳───⟢',
+│• Uptime: *%uptime (%muptime)*
+│• Database: %rtotalreg dari %totalreg
+┖──────⟤\n`.trimStart(),
+	header: '┎───❲ %category ❳──⟤',
 	body: '│%cmd %islimit %isPremium',
-	footer: '┕──────⟢\n',
+	footer: '┖──────⟤\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+${watermark} 2022
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -219,7 +218,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 		let no = 0
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "",
+                        "title": "📌 Reset Season",
                         "description": `${ucapan()} ${name}`,
 						"footerText": `Berikut ini adalah sub-menu yang terdapat pada Bot Atena\n\nUntuk melihat sub-menu, silahkan tekan tombol "SUB-MENU"`,
                         "buttonText": "SUB-MENU",
