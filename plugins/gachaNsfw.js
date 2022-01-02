@@ -146,7 +146,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
 					conn.sendButtonImg(m.chat, await(img2), 'Hayoo ngapain gosok layar hp ke tytyd', watermark, 'ðŸ’¦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
 			break
         default:
-            throw er
+            throw `${args[0]} Tidak ada di list gacha`
 		}
     }
     else conn.reply(m.chat, global.nsfw, m)

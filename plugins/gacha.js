@@ -194,7 +194,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 				conn.sendButtonImg(m.chat, await(img2), 'Nih ' + args[0].toLowerCase() + ' nya', watermark, '⏩Get Again', `${usedPrefix}gacha ` + args[0].toLowerCase(), m)
 			break
         default:
-            throw er
+            throw `${args[0]} Tidak ada di list gacha`
     }
 }
 handler.help = ['gacha'].map(v => v + ' <type>')
