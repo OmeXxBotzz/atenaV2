@@ -546,7 +546,7 @@ module.exports = {
                   externalAdReply: {
                     mediaUrl: 'https://youtu.be/-tKVN2mAKRI',
                     title: action === 'promote' ? promote : demote,
-                    body: 'watermark + '2k22',
+                    body: watermark + '2k22',
                     thumbnail: omg
                   }
                 }}) 
