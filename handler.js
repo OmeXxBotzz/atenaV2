@@ -116,7 +116,7 @@ module.exports = {
         } else global.db.data.users[m.sender] = {
             healt: 100,
             level: 0,
-            title: 'Player RPG || Atena Bot'
+            title: 'Player RPG || Atena Bot',
             exp: 0,
             limit: 15,
             lastclaim: 0,
