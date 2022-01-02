@@ -30,7 +30,7 @@ module.exports = {
             if (!isNumber(user.healt)) user.healt = 0
             if (!isNumber(user.level)) user.level = 0
             if (!isNumber(user.exp)) user.exp = 0
-            if (!isNumber(user.title)) user.title = 'Use RPG || Atena Bot'
+            if (!isNumber(user.title)) user.title = 'User RPG || Atena Bot'
             if (!isNumber(user.limit)) user.limit = 10
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
             if (!isNumber(user.lastgetmoney)) user.lastgetmoney = 0
@@ -107,18 +107,18 @@ module.exports = {
             if (!isNumber(user.lastmonthly)) user.lastmontly = 0
             if (!('registered' in user)) user.registered = false
             if (!user.registered) {
-                if (!('name' in user)) user.name = this.getName(m.sender)
-                if (!isNumber(user.age)) user.age = -1
-                if (!isNumber(user.regTime)) user.regTime = -1
+            if (!('name' in user)) user.name = this.getName(m.sender)
+            if (!isNumber(user.age)) user.age = -1
+            if (!isNumber(user.regTime)) user.regTime = -1
             }
-            if (!('autolevelup' in user)) user.autolevelup = true
+            if (!('autolevelup' in user)) user.autolevelup = false
             if (!('lastIstugfar' in user)) user.lastIstigfar = true
         } else global.db.data.users[m.sender] = {
             healt: 100,
             level: 0,
-            title: '',
+            title: 'Player RPG || Atena Bot'
             exp: 0,
-            limit: 10,
+            limit: 15,
             lastclaim: 0,
             lastgetmoney: 0,
             money: 0,
@@ -186,7 +186,7 @@ module.exports = {
             name: this.getName(m.sender),
             age: -1,
             regTime: -1,
-            autolevelup: true,
+            autolevelup: false,
             lastIstigfar: 0,
         }
 
@@ -524,7 +524,7 @@ module.exports = {
                   externalAdReply: {
                     mediaUrl: 'https://youtu.be/-tKVN2mAKRI',
                     title: action === 'add' ? wel : lea,
-                    body: watermark,
+                    body: watermark + '2k22',
                     thumbnail: kai
                   }
                 }}) 
@@ -533,11 +533,11 @@ module.exports = {
           }
           break
       case 'promote':
-        text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
+        text = (chat.sPromote || this.spromote || conn.spromote || '@user ```Congrats! you are now admin.```')
       case 'demote':
       var alv = await(await fetch('https://telegra.ph/file/d5acdbd1657771d83f6c4.jpg')).buffer()
       var omg = await(await fetch('https://telegra.ph/file/d5acdbd1657771d83f6c4.jpg')).buffer()
-        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
+        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```Sad, you are now not admin.```')
         var promote = '・𝙿𝚛𝚘𝚖𝚘𝚝𝚎 𝙳𝚎𝚝𝚎𝚌𝚝・'
         var demote = '・𝙳𝚎𝚖𝚘𝚝𝚎 𝙳𝚎𝚝𝚎𝚌𝚝・'
         text = text.replace('@user', '@' + participants[0].split('@')[0])
@@ -546,7 +546,7 @@ module.exports = {
                   externalAdReply: {
                     mediaUrl: 'https://youtu.be/-tKVN2mAKRI',
                     title: action === 'promote' ? promote : demote,
-                    body: 'Nayla lont',
+                    body: 'watermark + '2k22',
                     thumbnail: omg
                   }
                 }}) 

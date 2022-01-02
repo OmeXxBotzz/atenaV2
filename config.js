@@ -1,9 +1,8 @@
-//											© KhaelSan - © AtenaBot													  \\
+//												© KhaelSan - © AtenaBot													  \\
 global.owner = ['32460222094', '62822481929171', '6282248192917'] // Put your number here
 global.mods = ['6285904398191'] // Want some help?
 
 global.prems = ['6285274817872',
-							'6285274817872', 
 							'62857641165094', // Premium user has unlimited limit
 							'6283819142257',
 							'6285695484734',
@@ -61,11 +60,11 @@ global.author = '𝗙𝗼𝗹𝗹𝗼𝘄 𝗜𝗚\n• @ningenkankei.id\n• @k
 //global.author = '© Atena Bot\nwa.me/628114811363\n┏┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n┇\n┇					Ⓢⓐⓞⓣⓞⓜⓔ\n┇							Ⓐⓣⓔⓝⓐ\n┇\n┗┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\nғᴏʟʟᴏᴡ ɪɢ ᴏᴡɴᴇʀ: @ᴋʜᴀᴇʟʟʟ._\n𝚋𝚢 𝙺𝚑𝚊𝚎𝚕𝚂𝚊𝚗\n'
 
 // msg
-global.wait = '```Wait a few seconds...```'
-global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!'
-global.nsfw = 'Fitur NSFW Dimatikan.'
+global.wait = '```Memuat Data...```'
+global.rpg = 'Fitur Rpg Dimatikan\nKetik *.enable rpg* untuk menggunakan fitur ini'
+global.nsfw = 'Fitur NSFW Dimatikan!\nKetik *.nable nsfw* untuk mangkatifkan fitur ini'
 global.eror = '```Mungkin sedang error atau dalam perbaikan```'
-global.watermark = '© Atena'
+global.watermark = '© Atena\n© 2k22'
 
 global.imagebot = 'https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
