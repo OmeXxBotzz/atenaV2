@@ -30,8 +30,8 @@ module.exports = {
             if (!isNumber(user.healt)) user.healt = 0
             if (!isNumber(user.level)) user.level = 0
             if (!isNumber(user.exp)) user.exp = 0
-            if (!isNumber(user.title)) user.title = 'User RPG || Atena Bot'
-            if (!isNumber(user.limit)) user.limit = 10
+            if (!isNumber(user.title)) user.title = 'Alat (manusia)'
+            if (!isNumber(user.limit)) user.limit = 999999999
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
             if (!isNumber(user.lastgetmoney)) user.lastgetmoney = 0
             if (!isNumber(user.money)) user.money = 0
@@ -116,9 +116,9 @@ module.exports = {
         } else global.db.data.users[m.sender] = {
             healt: 100,
             level: 0,
-            title: 'Player RPG || Atena Bot',
+            title: 'Alat (manusia)',
             exp: 0,
-            limit: 15,
+            limit: 999999999,
             lastclaim: 0,
             lastgetmoney: 0,
             money: 0,
@@ -194,7 +194,7 @@ module.exports = {
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = false
+          if (!('welcome' in chat)) chat.welcome = true
           if (!('detect' in chat)) chat.detect = false
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
@@ -203,13 +203,13 @@ module.exports = {
           if (!('descUpdate' in chat)) chat.descUpdate = true
           if (!('delete' in chat)) chat.delete = false
           if (!('antiBadword' in chat)) chat.antiBadword = true
-          if (!('rpg' in chat)) chat.delete = true
-          if (!('nsfw' in chat)) chat.delete = false
+          if (!('rpg' in chat)) chat.delete = false
+          if (!('nsfw' in chat)) chat.delete = true
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = true
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
-          welcome: false,
+          welcome: true,
           detect: false,
           sWelcome: '',
           sBye: '',
@@ -217,8 +217,8 @@ module.exports = {
           sDemote: '',
           descUpdate: true,
           delete: false,
-          rpg: true,
-          nsfw: false,
+          rpg: false,
+          nsfw: true,
           antiBadword: true,
           antiLink: false,
           viewonce: true,
@@ -229,24 +229,24 @@ module.exports = {
         if (settings) {
           if (!'anon' in settings) settings.anon = true
           if (!'anticall' in settings) settings.anticall = true
-          if (!'antispam' in settings) settings.antispam = false
+          if (!'antispam' in settings) settings.antispam = true
           if (!'antitroli' in settings) settings.antitroli = false
-          if (!'backup' in settings) settings.backup = true
+          if (!'backup' in settings) settings.backup = false
           if (!isNumber(settings.backupDB)) settings.backupDB = 1
           if (!'groupOnly' in settings) settings.groupOnly = false
           if (!'jadibot' in settings) settings.groupOnly = false
-          if (!'nsfw' in settings) settings.nsfw = false
+          if (!'nsfw' in settings) settings.nsfw = true
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
           anon: true,
           anticall: true,
-          antispam: false,
+          antispam: true,
           antitroli: false,
-          backup: true,
+          backup: false,
           backupDB: 1,
           groupOnly: false,
           jadibot: false,
-          nsfw: false,
+          nsfw: true,
           status: 0,
         }
       } catch (e) {
@@ -495,8 +495,8 @@ module.exports = {
       } catch (e) {
         console.log(m, m.quoted, e)
       }
-      if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
-    this.chatRead(m.chat).catch(() => { })
+//      if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
+//    this.chatRead(m.chat).catch(() => { })
     }
   },
   async participantsUpdate({ jid, participants, action }) {
