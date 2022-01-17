@@ -6,10 +6,10 @@ let handler = async (m, { conn, args }) => {
   let lol = global.API('lolhum', `/api/nhentaipdf/${args[0]}`, {}, 'apikey')
   let { result } = (await get(lol)).data
   if (result.includes('HTML')) throw `Code ${args[0]} Not Found!`
-   conn.sendMessage(m.chat, await getBuffer(result), 'documentMessage', { quoted: m, filename: `${args[0]}.pdf`, mimetype: 'application/pdf' })
+   conn.sendMessage(m.chat, await getBuffer(result), 'documentMessage', { quoted: m, filename: `[byKhael] ${args[0]}.pdf`, mimetype: 'application/pdf' })
 }
 handler.help = ['nhpdf'].map(v => v + ' <code>')
-handler.tags = ['hentai']
+handler.tags = ['nsfw', 'anime', 'hentai']
 handler.command = /^(nhpdf)$/i
 handler.limit = true
 module.exports = handler
