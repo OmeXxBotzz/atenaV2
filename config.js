@@ -1,13 +1,13 @@
 //												© KhaelSan - © AtenaBot													  \\
-global.owner = ['32460222094', '62822481929171', '6282248192917'] // Put your number here
+global.owner = ['082253970822'] // Put your number here
 global.mods = [] // Want some help?
 
-global.prems = []
+global.prems = ['6289602215868']
 							
 global.linkGC = [
-							'https://chat.whatsapp.com/IfZhXNWaOCMH69jtHbv9xk', //Khael Here
-							'https://chat.whatsapp.com/GNK3daL7LPm95yUBvl021u', //Atena Here
-							'https://chat.whatsapp.com/FtztbBRlAis2o9r6ebLhzj' //Atena Official v2
+							'https://chat.whatsapp.com/CWYh0K5deYBErQ1UGsQsBv',
+							'https://chat.whatsapp.com/DFPSRRwVwnA0T49iyC89Ex',
+							'https://chat.whatsapp.com/JGZe3WrTf3nKfWlHeJMEOd'
 							]
 							
 global.APIs = { // API Prefix
@@ -35,7 +35,7 @@ global.APIKeys = { // APIKey Here
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': 'Dawnfrostkey',
-  'https://api.lolhuman.xyz': 'KirBotzzz01',
+  'https://api.lolhuman.xyz': 'NgentotRusa',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'ShiroNeko',
   'https://pencarikode.xyz': 'APIKEY',
@@ -56,15 +56,15 @@ global.author = '𝗙𝗼𝗹𝗹𝗼𝘄 𝗜𝗚\n• @ningenkankei.id\n• @k
 // msg
 global.wait = '```Tunggu sebentar yah adick² ```'
 global.rpg = 'Fitur Rpg Dimatikan\nKetik *.enable rpg* untuk menggunakan fitur ini'
-global.nsfw = 'Fitur NSFW Dimatikan!\nKetik *.nable nsfw* untuk mangkatifkan fitur ini'
+global.nsfw = 'Fitur NSFW Dimatikan!\nKetik *.enable nsfw* untuk mangkatifkan fitur ini'
 global.eror = '```Mungkin sedang error atau dalam perbaikan```'
-global.watermark = '© Khael'
+global.watermark = '© FOMEXX'
 
-global.imagebot = 'https://telegra.ph/file/5b94da0fc1fafa4aa1be7.jpg'
+global.imagebot = 'https://telegra.ph/file/e68a450e444d875bc15f8.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 // tingkat kesulitan, semakin tinggi semakin susah
-global.multiplier = 999999999
+global.multiplier = 99999
 
 //*****************PEMBATAS*********************\\
 // DON'T CHANGE OR REMOVE!, IF ERROR DON'T ASK ME!
